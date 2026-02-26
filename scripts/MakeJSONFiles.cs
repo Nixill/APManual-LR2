@@ -28,6 +28,7 @@ LegoWorld SandyBay = new LegoWorld(
     "Jimmy",
     "Laura",
     "Mike the Postman",
+    "Nurse Nikki",
     "Pauline",
     "PC Bobby",
     "Rachel",
@@ -312,7 +313,7 @@ record class LegoWorld(string WorldName, string[] RaceNames, string? BossRaceNam
     {
       yield return new JsonObject
       {
-        ["name"] = $"Race: {race}",
+        ["name"] = $"Race {i + 1}: {race}",
         ["region"] = WorldName,
         ["sort-key"] = $"{WorldIndex}-1-{i + 1}",
         ["requires"] = IsStartingWorld ? null : $"|{race} Race Key|",

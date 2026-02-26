@@ -2,7 +2,7 @@
     "schema": "../../schemas/Manual.locations.schema.json",
     "data": [
         {
-            "name": "Race: Dig-a-Brick",
+            "name": "Race 1: Dig-a-Brick",
             "region": "Sandy Bay",
             "sort-key": "1-1-1",
             "category": [
@@ -10,7 +10,7 @@
             ]
         },
         {
-            "name": "Race: Express Delivery",
+            "name": "Race 2: Express Delivery",
             "region": "Sandy Bay",
             "sort-key": "1-1-2",
             "category": [
@@ -18,7 +18,7 @@
             ]
         },
         {
-            "name": "Race: Hot Stuff",
+            "name": "Race 3: Hot Stuff",
             "region": "Sandy Bay",
             "sort-key": "1-1-3",
             "category": [
@@ -26,7 +26,7 @@
             ]
         },
         {
-            "name": "Race: Bobby\u0027s Beat",
+            "name": "Race 4: Bobby\u0027s Beat",
             "region": "Sandy Bay",
             "sort-key": "1-1-4",
             "category": [
@@ -181,7 +181,7 @@
             "sort-key": "1-4-13"
         },
         {
-            "name": "NPC: Pauline",
+            "name": "NPC: Nurse Nikki",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -189,7 +189,7 @@
             "sort-key": "1-4-14"
         },
         {
-            "name": "NPC: PC Bobby",
+            "name": "NPC: Pauline",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -197,7 +197,7 @@
             "sort-key": "1-4-15"
         },
         {
-            "name": "NPC: Rachel",
+            "name": "NPC: PC Bobby",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -205,7 +205,7 @@
             "sort-key": "1-4-16"
         },
         {
-            "name": "NPC: Sparky",
+            "name": "NPC: Rachel",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -213,7 +213,7 @@
             "sort-key": "1-4-17"
         },
         {
-            "name": "NPC: Steve",
+            "name": "NPC: Sparky",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -221,7 +221,7 @@
             "sort-key": "1-4-18"
         },
         {
-            "name": "NPC: Suzie",
+            "name": "NPC: Steve",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -229,7 +229,7 @@
             "sort-key": "1-4-19"
         },
         {
-            "name": "NPC: Tony the Coastguard",
+            "name": "NPC: Suzie",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -237,7 +237,7 @@
             "sort-key": "1-4-20"
         },
         {
-            "name": "NPC: Workman Fred",
+            "name": "NPC: Tony the Coastguard",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -245,7 +245,7 @@
             "sort-key": "1-4-21"
         },
         {
-            "name": "NPC: Workman Jon",
+            "name": "NPC: Workman Fred",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -253,7 +253,7 @@
             "sort-key": "1-4-22"
         },
         {
-            "name": "NPC: Workman Rob",
+            "name": "NPC: Workman Jon",
             "category": [
                 "Sandy Bay",
                 "Talksanity"
@@ -261,7 +261,15 @@
             "sort-key": "1-4-23"
         },
         {
-            "name": "Race: Tribal Trouble",
+            "name": "NPC: Workman Rob",
+            "category": [
+                "Sandy Bay",
+                "Talksanity"
+            ],
+            "sort-key": "1-4-24"
+        },
+        {
+            "name": "Race 1: Tribal Trouble",
             "region": "Dino Island",
             "sort-key": "2-1-1",
             "requires": "|Tribal Trouble Race Key|",
@@ -270,7 +278,7 @@
             ]
         },
         {
-            "name": "Race: Dino Dodgems",
+            "name": "Race 2: Dino Dodgems",
             "region": "Dino Island",
             "sort-key": "2-1-2",
             "requires": "|Dino Dodgems Race Key|",
@@ -279,7 +287,7 @@
             ]
         },
         {
-            "name": "Race: The Lost Race World",
+            "name": "Race 3: The Lost Race World",
             "region": "Dino Island",
             "sort-key": "2-1-3",
             "requires": "|The Lost Race World Race Key|",
@@ -288,7 +296,7 @@
             ]
         },
         {
-            "name": "Race: Cretaceous Canyon",
+            "name": "Race 4: Cretaceous Canyon",
             "region": "Dino Island",
             "sort-key": "2-1-4",
             "requires": "|Cretaceous Canyon Race Key|",
@@ -465,7 +473,7 @@
             "requires": "|Dino Island Exploration Key|"
         },
         {
-            "name": "Race: The Phobos Anomaly",
+            "name": "Race 1: The Phobos Anomaly",
             "region": "Mars",
             "sort-key": "3-1-1",
             "requires": "|The Phobos Anomaly Race Key|",
@@ -474,7 +482,7 @@
             ]
         },
         {
-            "name": "Race: Red Run",
+            "name": "Race 2: Red Run",
             "region": "Mars",
             "sort-key": "3-1-2",
             "requires": "|Red Run Race Key|",
@@ -483,7 +491,7 @@
             ]
         },
         {
-            "name": "Race: Deimos Derby",
+            "name": "Race 3: Deimos Derby",
             "region": "Mars",
             "sort-key": "3-1-3",
             "requires": "|Deimos Derby Race Key|",
@@ -492,7 +500,7 @@
             ]
         },
         {
-            "name": "Race: Contact",
+            "name": "Race 4: Contact",
             "region": "Mars",
             "sort-key": "3-1-4",
             "requires": "|Contact Race Key|",
@@ -651,7 +659,7 @@
             "requires": "|Mars Exploration Key|"
         },
         {
-            "name": "Race: Winter Wonderland",
+            "name": "Race 1: Winter Wonderland",
             "region": "Arctic",
             "sort-key": "4-1-1",
             "requires": "|Winter Wonderland Race Key|",
@@ -660,7 +668,7 @@
             ]
         },
         {
-            "name": "Race: Ice Canyons",
+            "name": "Race 2: Ice Canyons",
             "region": "Arctic",
             "sort-key": "4-1-2",
             "requires": "|Ice Canyons Race Key|",
@@ -669,7 +677,7 @@
             ]
         },
         {
-            "name": "Race: Slip Sliding",
+            "name": "Race 3: Slip Sliding",
             "region": "Arctic",
             "sort-key": "4-1-3",
             "requires": "|Slip Sliding Race Key|",
@@ -678,7 +686,7 @@
             ]
         },
         {
-            "name": "Race: Chill Thrill",
+            "name": "Race 4: Chill Thrill",
             "region": "Arctic",
             "sort-key": "4-1-4",
             "requires": "|Chill Thrill Race Key|",
@@ -837,7 +845,7 @@
             "requires": "|Arctic Exploration Key|"
         },
         {
-            "name": "Race: Wheeled Warriors",
+            "name": "Race 1: Wheeled Warriors",
             "region": "Xalax",
             "sort-key": "5-1-1",
             "requires": "|Wheeled Warriors Race Key|",
@@ -846,7 +854,7 @@
             ]
         },
         {
-            "name": "Race: Smash \u0027n\u0027 Bash",
+            "name": "Race 2: Smash \u0027n\u0027 Bash",
             "region": "Xalax",
             "sort-key": "5-1-2",
             "requires": "|Smash \u0027n\u0027 Bash Race Key|",
@@ -855,7 +863,7 @@
             ]
         },
         {
-            "name": "Race: Vertigo",
+            "name": "Race 3: Vertigo",
             "region": "Xalax",
             "sort-key": "5-1-3",
             "requires": "|Vertigo Race Key|",
@@ -864,7 +872,7 @@
             ]
         },
         {
-            "name": "Race: Beyond the Dome",
+            "name": "Race 4: Beyond the Dome",
             "region": "Xalax",
             "sort-key": "5-1-4",
             "requires": "|Beyond the Dome Race Key|",
