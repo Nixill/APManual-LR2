@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schemas/Manual.categories.schema.json",
+  "[1] Sandy Bay": {},
+  "[2] Dino Island": {},
+  "[3] Mars": {},
+  "[4] Arctic": {},
+  "[5] Xalax": {},
+  "[03] Bonus Game Keys": {},
+  "[7] Boss Keys": {},
+  "[02] Car Bonuses": {},
+  "[8] Exploration Keys": {},
+  "[6] Race Keys": {},
+  "[01] Traps": {},
+  "[2] Standard Races": {},
+  "[3] Boss Races": {},
+  "[4] Golden Bricks": {},
+  "[5] Bonus Games": {},
+  "[6] NPCs": {},
+  "[0] Bonus Game Unlocks": {}
+}

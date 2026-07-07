@@ -1,0 +1,24 @@
+{
+  "$schema": "../../schemas/Manual.regions.schema.json",
+  "Dino Island": {
+    "requires": "{HasGoldenBricks(4)}"
+  },
+  "Mars": {
+    "requires": "{HasGoldenBricks(8)}"
+  },
+  "Arctic": {
+    "requires": "{HasGoldenBricks(9)}"
+  },
+  "Xalax": {
+    "requires": "{HasXalaxAccess()}"
+  },
+  "Sandy Bay": {
+    "starting": true,
+    "connects_to": [
+      "Dino Island",
+      "Mars",
+      "Arctic",
+      "Xalax"
+    ]
+  }
+}

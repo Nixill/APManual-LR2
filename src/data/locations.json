@@ -1,0 +1,445 @@
+{
+  "$schema": "../../schemas/Manual.locations.schema.json",
+  "data": [
+    {
+      "name": "Race #1: Dig-a-Brick",
+      "requires": "|Dig-a-Brick Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[1] Sandy Bay"
+      ],
+      "sort-key": "1-1-1"
+    },
+    {
+      "name": "Race #2: Express Delivery",
+      "requires": "|Express Delivery Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[1] Sandy Bay"
+      ],
+      "sort-key": "1-1-2"
+    },
+    {
+      "name": "Race #3: Hot Stuff",
+      "requires": "|Hot Stuff Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[1] Sandy Bay"
+      ],
+      "sort-key": "1-1-3"
+    },
+    {
+      "name": "Race #4: Bobby's Beat",
+      "requires": "|Bobby's Beat Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[1] Sandy Bay"
+      ],
+      "sort-key": "1-1-4"
+    },
+    {
+      "name": "Race #1: Tribal Trouble",
+      "requires": "|Tribal Trouble Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[2] Dino Island"
+      ],
+      "sort-key": "2-1-1"
+    },
+    {
+      "name": "Race #2: Dino Dodgems",
+      "requires": "|Dino Dodgems Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[2] Dino Island"
+      ],
+      "sort-key": "2-1-2"
+    },
+    {
+      "name": "Race #3: The Lost Race World",
+      "requires": "|The Lost Race World Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[2] Dino Island"
+      ],
+      "sort-key": "2-1-3"
+    },
+    {
+      "name": "Race #4: Cretaceous Canyon",
+      "requires": "|Cretaceous Canyon Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[2] Dino Island"
+      ],
+      "sort-key": "2-1-4"
+    },
+    {
+      "name": "Race #1: The Phobos Anomaly",
+      "requires": "|The Phobos Anomaly Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[3] Mars"
+      ],
+      "sort-key": "3-1-1"
+    },
+    {
+      "name": "Race #2: Red Run",
+      "requires": "|Red Run Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[3] Mars"
+      ],
+      "sort-key": "3-1-2"
+    },
+    {
+      "name": "Race #3: Deimos Derby",
+      "requires": "|Deimos Derby Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[3] Mars"
+      ],
+      "sort-key": "3-1-3"
+    },
+    {
+      "name": "Race #4: Contact",
+      "requires": "|Contact Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[3] Mars"
+      ],
+      "sort-key": "3-1-4"
+    },
+    {
+      "name": "Race #1: Winter Wonderland",
+      "requires": "|Winter Wonderland Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[4] Arctic"
+      ],
+      "sort-key": "4-1-1"
+    },
+    {
+      "name": "Race #2: Ice Canyons",
+      "requires": "|Ice Canyons Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[4] Arctic"
+      ],
+      "sort-key": "4-1-2"
+    },
+    {
+      "name": "Race #3: Slip Sliding",
+      "requires": "|Slip Sliding Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[4] Arctic"
+      ],
+      "sort-key": "4-1-3"
+    },
+    {
+      "name": "Race #4: Chill Thrill",
+      "requires": "|Chill Thrill Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[4] Arctic"
+      ],
+      "sort-key": "4-1-4"
+    },
+    {
+      "name": "Race #1: Wheeled Warriors",
+      "requires": "|Wheeled Warriors Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[5] Xalax"
+      ],
+      "sort-key": "5-1-1"
+    },
+    {
+      "name": "Race #2: Smash 'n' Bash",
+      "requires": "|Smash 'n' Bash Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[5] Xalax"
+      ],
+      "sort-key": "5-1-2"
+    },
+    {
+      "name": "Race #3: Vertigo",
+      "requires": "|Vertigo Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[5] Xalax"
+      ],
+      "sort-key": "5-1-3"
+    },
+    {
+      "name": "Race #4: Beyond the Dome",
+      "requires": "|Beyond the Dome Race Key|",
+      "category": [
+        "[2] Standard Races",
+        "[5] Xalax"
+      ],
+      "sort-key": "5-1-4"
+    },
+    {
+      "name": "Boss Race: Sam Sanister's Slammer (Check 1)",
+      "requires": "{OptionCountPercent(Dino Island Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "Boss Race: Sam Sanister's Slammer (Check 2)",
+      "requires": "{OptionCountPercent(Dino Island Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "Boss Race: Sam Sanister's Slammer (Check 3)",
+      "requires": "{OptionCountPercent(Dino Island Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "Boss Race: Sam Sanister's Slammer (Check 4)",
+      "requires": "{OptionCountPercent(Dino Island Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "Boss Race: Sam Sanister's Slammer (Check 5)",
+      "requires": "{OptionCountPercent(Dino Island Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "Boss Race: Riegel's Racetrack (Check 1)",
+      "requires": "{OptionCountPercent(Mars Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "Boss Race: Riegel's Racetrack (Check 2)",
+      "requires": "{OptionCountPercent(Mars Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "Boss Race: Riegel's Racetrack (Check 3)",
+      "requires": "{OptionCountPercent(Mars Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "Boss Race: Riegel's Racetrack (Check 4)",
+      "requires": "{OptionCountPercent(Mars Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "Boss Race: Riegel's Racetrack (Check 5)",
+      "requires": "{OptionCountPercent(Mars Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "Boss Race: The Berg's Royal Rumble (Check 1)",
+      "requires": "{OptionCountPercent(Arctic Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "Boss Race: The Berg's Royal Rumble (Check 2)",
+      "requires": "{OptionCountPercent(Arctic Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "Boss Race: The Berg's Royal Rumble (Check 3)",
+      "requires": "{OptionCountPercent(Arctic Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "Boss Race: The Berg's Royal Rumble (Check 4)",
+      "requires": "{OptionCountPercent(Arctic Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "Boss Race: The Berg's Royal Rumble (Check 5)",
+      "requires": "{OptionCountPercent(Arctic Boss Key, boss_keys_needed)}",
+      "category": [
+        "[3] Boss Races",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "Boss Race: The Grand Finale (Check 1)",
+      "requires": "{OptionCountPercent(Xalax Boss Key, xalax_keys_needed)}"
+    },
+    {
+      "name": "Boss Race: The Grand Finale (Check 2)",
+      "requires": "{OptionCountPercent(Xalax Boss Key, xalax_keys_needed)}"
+    },
+    {
+      "name": "Boss Race: The Grand Finale (Check 3)",
+      "requires": "{OptionCountPercent(Xalax Boss Key, xalax_keys_needed)}"
+    },
+    {
+      "name": "Boss Race: The Grand Finale (Check 4)",
+      "requires": "{OptionCountPercent(Xalax Boss Key, xalax_keys_needed)}"
+    },
+    {
+      "name": "Boss Race: The Grand Finale (Check 5)",
+      "requires": "{OptionCountPercent(Xalax Boss Key, xalax_keys_needed)}"
+    },
+    {
+      "name": "Sandy Bay Beachside Golden Brick",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "Sandy Bay Cliffside Golden Brick",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "Sandy Bay Mountain Golden Brick",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "Dino Island Plateau Golden Brick",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "Dino Island Oceanside Golden Brick",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "Dino Island Jungle Golden Brick",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "Mars Powerstore Golden Brick",
+      "requires": "|Mars Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "Mars Gold Mine Golden Brick",
+      "requires": "|Mars Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "Mars Alien Base Golden Brick",
+      "requires": "|Mars Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "Arctic Crash Site Golden Brick",
+      "requires": "|Arctic Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "Arctic Trapped Ship Golden Brick",
+      "requires": "|Arctic Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "Arctic Base Camp Golden Brick",
+      "requires": "|Arctic Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "Xalax Tubeside Golden Brick",
+      "requires": "|Xalax Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[5] Xalax"
+      ]
+    },
+    {
+      "name": "Xalax Jump Ramp Golden Brick",
+      "requires": "|Xalax Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[5] Xalax"
+      ]
+    },
+    {
+      "name": "Xalax Dormant Volcano Golden Brick",
+      "requires": "|Xalax Exploration Key|",
+      "category": [
+        "[8] Exploration Keys",
+        "[5] Xalax"
+      ]
+    }
+  ]
+}
