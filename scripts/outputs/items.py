@@ -67,7 +67,7 @@ boss_keys_dict = {
     name=txt.Items.BOSS_KEY.format(world=world.name),
     classification_count={
       ItemClassification.PROGRESSION: 1,
-      ItemClassification.USEFUL: 1
+      ItemClassification.USEFUL: 0
     },
     category=[categories.boss_keys, categories.for_world(world)],
     sort_key=get_sort_key(categories.boss_keys, world),
@@ -123,7 +123,7 @@ traps = [
   Item(
     name=txt.Items.TRAP_TEMPLATE.format(name=trap),
     item_class=ItemClassification.TRAP,
-    count=100,
+    count=0,
     category=[categories.traps],
     sort_key=get_sort_key(categories.traps, index=index),
   )

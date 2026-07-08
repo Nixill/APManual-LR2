@@ -1,7 +1,47 @@
 {
   "$schema": "../../schemas/Manual.options.schema.json",
-  "core": {},
+  "core": {
+    "death_link": {
+      "type": "Toggle",
+      "rich_text_doc": true,
+      "display_name": "Death Link",
+      "description": [
+        "Enable death link?",
+        "",
+        "Send a death whenever you lose, reset, or leave any race or minigame,",
+        "or if your game crashes.",
+        "",
+        "If you receive a death during a race or minigame, restart that race or",
+        "minigame immediately."
+      ],
+      "default": false
+    },
+    "filler_traps": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "hidden": true
+    }
+  },
   "user": {
+    "save_mode": {
+      "type": "Choice",
+      "rich_text_doc": true,
+      "display_name": "Game Save Mode",
+      "description": [
+        "Defines the game completion prior to the start of the Archipelago run.",
+        "- NEW GAME: Start a new game and play through normally.",
+        "- NEW GAME WITH CHEATS: Start a new game. Allows using cheats to skip",
+        "  around.",
+        "- FINISHED SAVE: Start with a save file that has all races unlocked."
+      ],
+      "default": 1,
+      "group": "Setup Options",
+      "values": {
+        "new_game": 1,
+        "new_game_with_cheats": 2,
+        "finished_save": 3
+      }
+    },
     "boss_keys_available": {
       "type": "Range",
       "rich_text_doc": true,
@@ -11,6 +51,7 @@
         "multiworld."
       ],
       "default": 4,
+      "group": "Key Generation",
       "range_start": 1,
       "range_end": 10
     },
@@ -19,11 +60,14 @@
       "rich_text_doc": true,
       "display_name": "Boss Keys Needed (%)",
       "description": [
-        " Percentage of generated keys that are needed to partake in a boss",
-        "race.  Rounds down, with a minimum of 1, except that truncated",
-        "decimals round up (for example, 33% of 6 keys is 2)."
+        "Percentage of generated keys that are needed to partake in a boss",
+        "race.",
+        "",
+        "Rounds down, with a minimum of 1, except that truncated decimals round",
+        "up (for example, 33% of 6 keys is 2)."
       ],
       "default": 80,
+      "group": "Key Generation",
       "range_start": 10,
       "range_end": 100
     },
@@ -35,6 +79,7 @@
         "Number of keys to The Grand Finale generated in the multiworld."
       ],
       "default": 5,
+      "group": "Key Generation",
       "range_start": 1,
       "range_end": 10
     },
@@ -43,12 +88,87 @@
       "rich_text_doc": true,
       "display_name": "Xalax Keys Needed (%)",
       "description": [
-        " Percentage of generated keys that are needed to partake in The Grand",
-        "Finale.  Rounds down, with a minimum of 1, except that truncated",
-        "decimals round up (for example, 33% of 6 keys is 2)."
+        "Percentage of generated keys that are needed to partake in The Grand",
+        "Finale.",
+        "",
+        "Rounds down, with a minimum of 1, except that truncated decimals round",
+        "up (for example, 33% of 6 keys is 2)."
       ],
       "default": 80,
+      "group": "Key Generation",
       "range_start": 10,
+      "range_end": 100
+    },
+    "weight_item_embargo": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "default": 50,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 100
+    },
+    "weight_freeze": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "default": 50,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 100
+    },
+    "weight_destroy_your_car": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "default": 50,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 100
+    },
+    "weight_no_pitstops": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "default": 50,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 100
+    },
+    "weight_no_shortcuts": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "default": 50,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 100
+    },
+    "weight_drive_in_reverse": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "default": 50,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 100
+    },
+    "weight_top_down_camera": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "default": 50,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 100
+    },
+    "weight_quit_adventure": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "default": 50,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 100
+    },
+    "weight_filler": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "default": 50,
+      "group": "Item Weighting",
+      "range_start": 0,
       "range_end": 100
     }
   }

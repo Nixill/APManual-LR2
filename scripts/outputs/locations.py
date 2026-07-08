@@ -65,7 +65,7 @@ boss_check_dict = {
       region=regions.for_world(world),
       category=[categories.boss_races, categories.for_world(world)]
     )
-    for index in range(1, 6)
+    for index in range(1, 11)
   }
   for world in worlds.mid_worlds
 }
@@ -73,9 +73,12 @@ boss_check_dict = {
 boss_check_dict[worlds.xalax.name] = {
   index: Location(
     name=txt.Locations.BOSS_RACE.format(name=worlds.xalax.boss_race_name, i=index),
-    requires=req.option_count_percent(item=items.boss_keys_dict[worlds.xalax.name], option=options.xalax_keys_needed)
+    requires=req.option_count_percent(item=items.boss_keys_dict[worlds.xalax.name], option=options.xalax_keys_needed),
+    extra_data={
+      'boss_check_count': index
+    }
   )
-  for index in range(1, 6)
+  for index in range(1, 11)
 }
 
 golden_brick_dict = {

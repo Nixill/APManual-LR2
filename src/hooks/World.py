@@ -1,5 +1,6 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
+from ..nixcode.options import remove_extra_boss_checks, validate_options_early
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
@@ -42,7 +43,7 @@ def before_generate_early(world: World, multiworld: MultiWorld, player: int) -> 
     This is the earliest hook called during generation, before anything else is done.
     Use it to check or modify incompatible options, or to set up variables for later use.
     """
-    pass
+    validate_options_early(world)
 
 # Called before regions and locations are created. Not clear why you'd want this, but it's here. Victory location is included, but Victory event is not placed yet.
 def before_create_regions(world: World, multiworld: MultiWorld, player: int):
@@ -51,7 +52,9 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     # Use this hook to remove locations from the world
-    locationNamesToRemove: list[str] = [] # List of location names
+    locationNamesToRemove: list[str] = [
+        *remove_extra_boss_checks(world)
+    ] # List of location names
 
     # Add your code here to calculate which locations to remove
 

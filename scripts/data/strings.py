@@ -69,6 +69,13 @@ class Locations:
     NPCS = '{world_index}-5-{index}'
     BONUS_GAME_UNLOCKS = '0-{index}'
 
+class Options:
+  class Groups:
+    ITEM_WEIGHTING = 'Item Weighting'
+    KEY_GENERATION = 'Key Generation'
+    OTHERS = 'Others'
+    SETUP_OPTIONS = 'Setup Options'
+
 class Regions:
   EPHEMERAL = 'Ephemeral'
 
