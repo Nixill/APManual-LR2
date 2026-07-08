@@ -16,5 +16,8 @@
   "[4] Golden Bricks": {},
   "[5] Bonus Games": {},
   "[6] NPCs": {},
-  "[0] Bonus Game Unlocks": {}
+  "[0] Bonus Game Unlocks": {},
+  "Boss Race Events": {
+    "hidden": true
+  }
 }

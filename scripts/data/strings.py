@@ -1,6 +1,8 @@
 class Categories:
   # Category names are plural.
   WORLDS = '[{index}] {world_name}'
+  class Events:
+    BOSS_RACES = 'Boss Race Events'
   class Items:
     BONUS_GAME_KEYS = '[03] Bonus Game Keys'
     BOSS_KEYS = '[7] Boss Keys'
@@ -26,6 +28,7 @@ class Items:
     GRIP = 'Grip Upgrade'
     POWER = 'Power Upgrade'
     SHIELD = 'Shield Upgrade'
+  BONUS_GAME_KEY = '{world} Bonus Game Key'
   BOSS_KEY = '{world} Boss Key'
   EXPLORATION_KEY = '{world} Exploration Key'
   RACE_KEY = '{race} Race Key'
@@ -36,10 +39,27 @@ class Items:
     BONUS_GAME_KEYS = '{world_index}-4'
     TRAPS = '0-1-{index}'
     CAR_BONUSES = '0-2-{index}'
+  TRAP_LIST = [
+    'Item embargo',
+    'Freeze',
+    'Destroy your car',
+    'No pitstops',
+    'No shortcuts',
+    'Drive in reverse',
+    'Top-down camera',
+    'Quit adventure'
+  ]
+  TRAP_TEMPLATE = 'TRAP - {name}'
+  class Values:
+    GOLDEN_BRICK = 'gold_bricks'
+    SANDY_BAY = 'sandy_bay_races'
 
 class Locations:
+  BONUS_GAME_COMPLETE = 'Bonus Game: {world} {diff}'
+  BONUS_GAME_UNLOCK = 'Bonus Game Unlock #{i}'
   BOSS_RACE = 'Boss Race: {name} (Check {i})'
   GOLDEN_BRICK = '{world} {name} Golden Brick'
+  NPC = 'NPC: {name}'
   STANDARD_RACE = 'Race #{index}: {race_name}'
   class SortKeys:
     STANDARD_RACES = '{world_index}-1-{index}'
@@ -48,6 +68,9 @@ class Locations:
     BONUS_GAMES = '{world_index}-4-{index}'
     NPCS = '{world_index}-5-{index}'
     BONUS_GAME_UNLOCKS = '0-{index}'
+
+class Regions:
+  EPHEMERAL = 'Ephemeral'
 
 class Requirements:
   HAS_GOLDEN_BRICKS = 'HasGoldenBricks'

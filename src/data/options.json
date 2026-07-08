@@ -1,52 +1,55 @@
 {
   "$schema": "../../schemas/Manual.options.schema.json",
-  "boss_keys_available": {
-    "type": "Range",
-    "rich_text_doc": true,
-    "display_name": "Boss Keys Generated",
-    "description": [
-      "Number of keys per boss race, except on Xalax, generated in the",
-      "multiworld."
-    ],
-    "default": 4,
-    "range_start": 1,
-    "range_end": 10
-  },
-  "boss_keys_needed": {
-    "type": "Range",
-    "rich_text_doc": true,
-    "display_name": "Boss Keys Needed (%)",
-    "description": [
-      " Percentage of generated keys that are needed to partake in a boss",
-      "race.  Rounds down, with a minimum of 1, except that truncated",
-      "decimals round up (for example, 33% of 6 keys is 2)."
-    ],
-    "default": 80,
-    "range_start": 10,
-    "range_end": 100
-  },
-  "xalax_keys_available": {
-    "type": "Range",
-    "rich_text_doc": true,
-    "display_name": "Xalax Keys Generated",
-    "description": [
-      "Number of keys to The Grand Finale generated in the multiworld."
-    ],
-    "default": 5,
-    "range_start": 1,
-    "range_end": 10
-  },
-  "xalax_keys_needed": {
-    "type": "Range",
-    "rich_text_doc": true,
-    "display_name": "Xalax Keys Needed (%)",
-    "description": [
-      " Percentage of generated keys that are needed to partake in The Grand",
-      "Finale.  Rounds down, with a minimum of 1, except that truncated",
-      "decimals round up (for example, 33% of 6 keys is 2)."
-    ],
-    "default": 80,
-    "range_start": 10,
-    "range_end": 100
+  "core": {},
+  "user": {
+    "boss_keys_available": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "display_name": "Boss Keys Generated",
+      "description": [
+        "Number of keys per boss race, except on Xalax, generated in the",
+        "multiworld."
+      ],
+      "default": 4,
+      "range_start": 1,
+      "range_end": 10
+    },
+    "boss_keys_needed": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "display_name": "Boss Keys Needed (%)",
+      "description": [
+        " Percentage of generated keys that are needed to partake in a boss",
+        "race.  Rounds down, with a minimum of 1, except that truncated",
+        "decimals round up (for example, 33% of 6 keys is 2)."
+      ],
+      "default": 80,
+      "range_start": 10,
+      "range_end": 100
+    },
+    "xalax_keys_available": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "display_name": "Xalax Keys Generated",
+      "description": [
+        "Number of keys to The Grand Finale generated in the multiworld."
+      ],
+      "default": 5,
+      "range_start": 1,
+      "range_end": 10
+    },
+    "xalax_keys_needed": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "display_name": "Xalax Keys Needed (%)",
+      "description": [
+        " Percentage of generated keys that are needed to partake in The Grand",
+        "Finale.  Rounds down, with a minimum of 1, except that truncated",
+        "decimals round up (for example, 33% of 6 keys is 2)."
+      ],
+      "default": 80,
+      "range_start": 10,
+      "range_end": 100
+    }
   }
 }

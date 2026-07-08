@@ -3,6 +3,24 @@ from textwrap import wrap
 from mod.classes import Option, RangeOption, ToggleOption, ChoiceOption
 from mod.json_types import JsonObject
 
+save_mode = ChoiceOption(
+  name='save_mode',
+  values={
+    'new_game': 1,
+    'new_game_with_cheats': 2,
+    'finished_save': 3
+  },
+  default=1,
+  display_name='Game Save Mode',
+  description=wrap(
+'''
+Defines the game completion prior to the start of the Archipelago run.
+- NEW GAME: Start a new game and play through normally.
+- NEW GAME WITH CHEATS: Start a new game. Open to using cheats to unlock worlds.
+- FINISHED SAVE: Start with a save file that has all races unlocked.
+''')
+)
+
 boss_keys_available = RangeOption(
   name='boss_keys_available',
   range_start=1,

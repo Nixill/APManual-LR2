@@ -62,7 +62,7 @@ class Category(HasName):
 
 #region Event
 class Event(HasName):
-  requires: str
+  requires: Optional[str] = None
   category: list[str] = []
   region: Optional[str] = None
   copy_location: Optional[str] = None
@@ -74,8 +74,8 @@ class Event(HasName):
   def __init__(
       self,
       name: str,
-      requires: str,
       *,
+      requires: Optional[str] = None,
       category: list[Category | str] = [],
       region: Optional[Region | str] = None,
       copy_location: Optional[Location | str] = None,
@@ -83,10 +83,10 @@ class Event(HasName):
       sort_key: Optional[str] = None,
       extra_data: Optional[JsonObject] = None,
       comment: Optional[str] = None):
-    if ':' in self.name or '(' in self.name or ')' in self.name:
+    if ':' in name or '(' in name or ')' in name:
       raise ValueError('Event names cannot contain colons or parentheses.')
     self.name = name
-    self.requires = requires
+    if requires: self.requires = requires
     if category: self.category = [name_of(cat) for cat in category]
     if region: self.region = name_of(region)
     if copy_location: self.copy_location = name_of(copy_location)
@@ -240,7 +240,7 @@ class Item(HasName):
       early: bool = False,
       local: bool = False,
       sort_key: Optional[str] = None,
-      value: Optional[dict[str | Value, int]] = None,
+      value: dict[str, int] | dict[Value, int] | None = None,
       extra_data: Optional[JsonObject] = None,
       comment: Optional[str] = None):
     if ':' in name or '(' in name or ')' in name:
@@ -440,9 +440,22 @@ class Option(HasName):
 
   @staticmethod
   def to_json_output(options: Iterable[Option]) -> JsonObject:
+    core_options: JsonObject = {}
+    user_options: JsonObject = {}
+    for option in options:
+      if isinstance(option, DeathLinkOption):
+        core_options['death_link'] = option.to_json()
+      elif isinstance(option, FillerTrapsOption):
+        core_options['filler_traps'] = option.to_json()
+      elif isinstance(option, GoalOption):
+        core_options['goal'] = option.to_json()
+      else:
+        user_options[option.name] = option.to_json()
+
     return {
       '$schema': get_schema('options'),
-      **{option.name: option.to_json() for option in options}
+      'core': core_options,
+      'user': user_options
     }
 
 class ToggleOption(Option):
@@ -472,6 +485,28 @@ class ToggleOption(Option):
 
   # since this doesn't add properties, it uses superclass
   # to_json functions unchanged
+
+class DeathLinkOption(ToggleOption):
+  def __init__(
+      self,
+      default: bool = False,
+      *,
+      description: Optional[list[str]] = None,
+      display_name: Optional[str] = None,
+      hidden: bool = False,
+      visibility: Optional[OptionVisibility] = None,
+      comment: Optional[str] = None):
+    super().__init__(
+      name='death_link',
+      default=default,
+      description=description,
+      display_name=display_name,
+      hidden=hidden,
+      visibility=visibility,
+      comment=comment)
+
+  # since this doesn't add or remove properties, it uses
+  # superclass to_json functions unchanged
 
 class RangeOption(Option):
   range_start: int
@@ -518,6 +553,37 @@ class RangeOption(Option):
     if self.values: out['values'] = dict(self.values)
     return (self.name, out)
 
+class FillerTrapsOption(RangeOption):
+  def __init__(
+      self,
+      values: Optional[dict[str, int]] = None,
+      *,
+      description: Optional[list[str]] = None,
+      display_name: Optional[str] = None,
+      hidden: bool = False,
+      visibility: Optional[OptionVisibility] = None,
+      comment: Optional[str] = None):
+    super().__init__(
+      name='filler_traps',
+      range_start=0,
+      range_end=100,
+      values=values,
+      description=description,
+      display_name=display_name,
+      hidden=hidden,
+      visibility=visibility,
+      extra_data=None,
+      comment=comment)
+
+  def to_json(self) -> JsonObject:
+    return self.to_json_kvp()[1]
+
+  def to_json_kvp(self) -> JsonObjectProperty:
+    _, out = super().to_json_kvp()
+    del out['range_start']
+    del out['range_end']
+    return (self.name, out)
+
 class ChoiceOption(Option):
   values: dict[str, int]
   aliases: Optional[dict[str, int]] = None
@@ -561,6 +627,39 @@ class ChoiceOption(Option):
     out['values'] = dict(self.values)
     if self.aliases: out['aliases'] = dict(self.aliases)
     if self.allow_custom_value: out['allow_custom_value'] = True
+    return (self.name, out)
+
+class GoalOption(ChoiceOption):
+  def __init__(
+      self,
+      aliases: Optional[dict[str, int]] = None,
+      *,
+      display_name: Optional[str] = None,
+      description: Optional[list[str]] = None,
+      default: Optional[int] = None,
+      hidden: bool = False,
+      visibility: Optional[OptionVisibility] = None,
+      comment: Optional[str] = None):
+    super().__init__(
+      name='goal',
+      values={},
+      aliases=aliases,
+      allow_custom_value=False,
+      display_name=display_name,
+      description=description,
+      default=default,
+      hidden=hidden,
+      visibility=visibility,
+      comment=comment)
+
+  def to_json(self) -> JsonObject:
+    return self.to_json_kvp()[1]
+
+  def to_json_kvp(self) -> JsonObjectProperty:
+    _, out = super().to_json_kvp()
+    del out['values']
+    del out['allow_custom_value']
+    del out['group']
     return (self.name, out)
 #endregion
 

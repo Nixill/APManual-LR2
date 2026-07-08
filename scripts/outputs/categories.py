@@ -43,10 +43,17 @@ location_categories = [
   bonus_game_unlocks
 ]
 
+boss_race_events = Category(txt.Categories.Events.BOSS_RACES, hidden=True)
+
+event_categories = [
+  boss_race_events
+]
+
 all_categories: list[Category] = [
   *world_categories.values(),
   *item_categories,
-  *location_categories
+  *location_categories,
+  *event_categories,
 ]
 
 category_table: JsonObject = Category.to_json_output(all_categories)

@@ -37,10 +37,24 @@ race_check_dict = {
     category=[categories.standard_races, categories.for_world(world)],
     sort_key=get_sort_key(categories.standard_races, world, index)
   )
-  for world in worlds.all_worlds
+  for world in worlds.boss_worlds
   for index, race_name in enumerate(world.race_names, 1)
 }
 '''Maps Race Name → Location'''
+
+_sandy_bay_keys: list[Item] = []
+for index, race_name in enumerate(worlds.sandy_bay.race_names, 1):
+  requirement = ''
+  this_race_key = items.race_keys_dict[race_name]
+  if _sandy_bay_keys:
+    requirement = req.all(
+      req.any(
+        req.yaml_compare(options.save_mode, '>=', 2),
+        req.all(*(req.item(key) for key in _sandy_bay_keys))),
+      req.item(this_race_key))
+  else:
+    requirement = req.item(this_race_key)
+  _sandy_bay_keys.append(this_race_key)
 
 # Does not count Xalax (and Sandy Bay has no bosses)
 boss_check_dict = {
@@ -78,6 +92,42 @@ golden_brick_dict = {
   for world in worlds.all_worlds
 }
 
+bonus_game_unlocks: list[Location] = [
+  Location(
+    name=txt.Locations.BONUS_GAME_UNLOCK.format(i=index),
+    requires=req.category(categories.car_bonuses, index),
+    place_item_category=[categories.bonus_game_keys],
+    sort_key=get_sort_key(categories.bonus_game_unlocks, index=index)
+  )
+  for index in range(1, 11)
+]
+
+bonus_game_completions: dict[str, dict[bool, Location]] = {
+  world.name: {
+    diff_is_hard: Location(
+      name=txt.Locations.BONUS_GAME_COMPLETE.format(world=world.name, diff='Hard' if diff_is_hard else 'Easy'),
+      requires=req.all(
+        req.item(items.bonus_game_keys_dict[world.name], count=2 if diff_is_hard else 1),
+        req.item(items.exploration_keys_dict[world.name])
+      ),
+      category=[categories.bonus_games, categories.for_world(world)],
+      sort_key=get_sort_key(categories.bonus_games, world=world, index=2 if diff_is_hard else 1)
+    )
+    for diff_is_hard in [False, True]
+  }
+  for world in worlds.all_worlds
+}
+
+npc_list: list[Location] = [
+  Location(
+    name=txt.Locations.NPC.format(name=npc),
+    requires=req.item(items.exploration_keys_dict[world.name]),
+    category=[categories.npcs, categories.for_world(world)]
+  )
+  for world in worlds.all_worlds
+  for npc in world.npc_names
+]
+
 all_locations: list[Location] = [
   *race_check_dict.values(),
   *[boss_race
@@ -86,6 +136,11 @@ all_locations: list[Location] = [
   *[golden_brick
     for world in golden_brick_dict.values()
     for golden_brick in world.values()],
+  *bonus_game_unlocks,
+  *[comp
+    for world in bonus_game_completions.values()
+    for comp in world.values()],
+  *npc_list,
 ]
 
 location_table: JsonObject = Location.to_json_output(all_locations)

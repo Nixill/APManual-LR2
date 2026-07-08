@@ -1,24 +1,26 @@
 {
   "$schema": "../../schemas/Manual.regions.schema.json",
   "Dino Island": {
-    "requires": "{HasGoldenBricks(4)}"
+    "requires": "(({ItemValue(gold_bricks:4)} and {ItemValue(sandy_bay_races:4)}) or {YamlCompare(<mod.classes.ChoiceOption object at 0x00000268B1569E80> >= 2)})"
   },
   "Mars": {
-    "requires": "{HasGoldenBricks(8)}"
+    "requires": "(({ItemValue(gold_bricks:8)} and {ItemValue(sandy_bay_races:4)}) or {YamlCompare(<mod.classes.ChoiceOption object at 0x00000268B1569E80> >= 2)})"
   },
   "Arctic": {
-    "requires": "{HasGoldenBricks(9)}"
+    "requires": "(({ItemValue(gold_bricks:9)} and {ItemValue(sandy_bay_races:4)}) or {YamlCompare(<mod.classes.ChoiceOption object at 0x00000268B1569E80> >= 2)})"
   },
   "Xalax": {
-    "requires": "{HasXalaxAccess()}"
+    "requires": "(|@Boss Race Events:ALL| or {YamlCompare(<mod.classes.ChoiceOption object at 0x00000268B1569E80> = 3)})"
   },
+  "Ephemeral": {},
   "Sandy Bay": {
     "starting": true,
     "connects_to": [
       "Dino Island",
       "Mars",
       "Arctic",
-      "Xalax"
+      "Xalax",
+      "Ephemeral"
     ]
   }
 }

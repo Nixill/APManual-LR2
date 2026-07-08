@@ -200,6 +200,84 @@
       "progression": true,
       "count": 10,
       "sort-key": "0-2-3"
+    },
+    {
+      "name": "Sandy Bay Bonus Game Key",
+      "progression": true,
+      "count": 2,
+      "sort-key": "1-4"
+    },
+    {
+      "name": "Dino Island Bonus Game Key",
+      "progression": true,
+      "count": 2,
+      "sort-key": "2-4"
+    },
+    {
+      "name": "Mars Bonus Game Key",
+      "progression": true,
+      "count": 2,
+      "sort-key": "3-4"
+    },
+    {
+      "name": "Arctic Bonus Game Key",
+      "progression": true,
+      "count": 2,
+      "sort-key": "4-4"
+    },
+    {
+      "name": "Xalax Bonus Game Key",
+      "progression": true,
+      "count": 2,
+      "sort-key": "5-4"
+    },
+    {
+      "name": "TRAP - Item embargo",
+      "trap": true,
+      "count": 100,
+      "sort-key": "0-1-1"
+    },
+    {
+      "name": "TRAP - Freeze",
+      "trap": true,
+      "count": 100,
+      "sort-key": "0-1-2"
+    },
+    {
+      "name": "TRAP - Destroy your car",
+      "trap": true,
+      "count": 100,
+      "sort-key": "0-1-3"
+    },
+    {
+      "name": "TRAP - No pitstops",
+      "trap": true,
+      "count": 100,
+      "sort-key": "0-1-4"
+    },
+    {
+      "name": "TRAP - No shortcuts",
+      "trap": true,
+      "count": 100,
+      "sort-key": "0-1-5"
+    },
+    {
+      "name": "TRAP - Drive in reverse",
+      "trap": true,
+      "count": 100,
+      "sort-key": "0-1-6"
+    },
+    {
+      "name": "TRAP - Top-down camera",
+      "trap": true,
+      "count": 100,
+      "sort-key": "0-1-7"
+    },
+    {
+      "name": "TRAP - Quit adventure",
+      "trap": true,
+      "count": 100,
+      "sort-key": "0-1-8"
     }
   ]
 }

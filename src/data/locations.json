@@ -2,42 +2,6 @@
   "$schema": "../../schemas/Manual.locations.schema.json",
   "data": [
     {
-      "name": "Race #1: Dig-a-Brick",
-      "requires": "|Dig-a-Brick Race Key|",
-      "category": [
-        "[2] Standard Races",
-        "[1] Sandy Bay"
-      ],
-      "sort-key": "1-1-1"
-    },
-    {
-      "name": "Race #2: Express Delivery",
-      "requires": "|Express Delivery Race Key|",
-      "category": [
-        "[2] Standard Races",
-        "[1] Sandy Bay"
-      ],
-      "sort-key": "1-1-2"
-    },
-    {
-      "name": "Race #3: Hot Stuff",
-      "requires": "|Hot Stuff Race Key|",
-      "category": [
-        "[2] Standard Races",
-        "[1] Sandy Bay"
-      ],
-      "sort-key": "1-1-3"
-    },
-    {
-      "name": "Race #4: Bobby's Beat",
-      "requires": "|Bobby's Beat Race Key|",
-      "category": [
-        "[2] Standard Races",
-        "[1] Sandy Bay"
-      ],
-      "sort-key": "1-1-4"
-    },
-    {
       "name": "Race #1: Tribal Trouble",
       "requires": "|Tribal Trouble Race Key|",
       "category": [
@@ -438,6 +402,536 @@
       "requires": "|Xalax Exploration Key|",
       "category": [
         "[8] Exploration Keys",
+        "[5] Xalax"
+      ]
+    },
+    {
+      "name": "Bonus Game Unlock #1",
+      "requires": "|@[02] Car Bonuses:1|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-1"
+    },
+    {
+      "name": "Bonus Game Unlock #2",
+      "requires": "|@[02] Car Bonuses:2|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-2"
+    },
+    {
+      "name": "Bonus Game Unlock #3",
+      "requires": "|@[02] Car Bonuses:3|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-3"
+    },
+    {
+      "name": "Bonus Game Unlock #4",
+      "requires": "|@[02] Car Bonuses:4|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-4"
+    },
+    {
+      "name": "Bonus Game Unlock #5",
+      "requires": "|@[02] Car Bonuses:5|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-5"
+    },
+    {
+      "name": "Bonus Game Unlock #6",
+      "requires": "|@[02] Car Bonuses:6|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-6"
+    },
+    {
+      "name": "Bonus Game Unlock #7",
+      "requires": "|@[02] Car Bonuses:7|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-7"
+    },
+    {
+      "name": "Bonus Game Unlock #8",
+      "requires": "|@[02] Car Bonuses:8|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-8"
+    },
+    {
+      "name": "Bonus Game Unlock #9",
+      "requires": "|@[02] Car Bonuses:9|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-9"
+    },
+    {
+      "name": "Bonus Game Unlock #10",
+      "requires": "|@[02] Car Bonuses:10|",
+      "place_item_category": [
+        "[03] Bonus Game Keys"
+      ],
+      "sort-key": "0-10"
+    },
+    {
+      "name": "Bonus Game: Sandy Bay Easy",
+      "requires": "(|Sandy Bay Bonus Game Key:1| and |Sandy Bay Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[1] Sandy Bay"
+      ],
+      "sort-key": "1-4-1"
+    },
+    {
+      "name": "Bonus Game: Sandy Bay Hard",
+      "requires": "(|Sandy Bay Bonus Game Key:2| and |Sandy Bay Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[1] Sandy Bay"
+      ],
+      "sort-key": "1-4-2"
+    },
+    {
+      "name": "Bonus Game: Dino Island Easy",
+      "requires": "(|Dino Island Bonus Game Key:1| and |Dino Island Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[2] Dino Island"
+      ],
+      "sort-key": "2-4-1"
+    },
+    {
+      "name": "Bonus Game: Dino Island Hard",
+      "requires": "(|Dino Island Bonus Game Key:2| and |Dino Island Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[2] Dino Island"
+      ],
+      "sort-key": "2-4-2"
+    },
+    {
+      "name": "Bonus Game: Mars Easy",
+      "requires": "(|Mars Bonus Game Key:1| and |Mars Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[3] Mars"
+      ],
+      "sort-key": "3-4-1"
+    },
+    {
+      "name": "Bonus Game: Mars Hard",
+      "requires": "(|Mars Bonus Game Key:2| and |Mars Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[3] Mars"
+      ],
+      "sort-key": "3-4-2"
+    },
+    {
+      "name": "Bonus Game: Arctic Easy",
+      "requires": "(|Arctic Bonus Game Key:1| and |Arctic Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[4] Arctic"
+      ],
+      "sort-key": "4-4-1"
+    },
+    {
+      "name": "Bonus Game: Arctic Hard",
+      "requires": "(|Arctic Bonus Game Key:2| and |Arctic Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[4] Arctic"
+      ],
+      "sort-key": "4-4-2"
+    },
+    {
+      "name": "Bonus Game: Xalax Easy",
+      "requires": "(|Xalax Bonus Game Key:1| and |Xalax Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[5] Xalax"
+      ],
+      "sort-key": "5-4-1"
+    },
+    {
+      "name": "Bonus Game: Xalax Hard",
+      "requires": "(|Xalax Bonus Game Key:2| and |Xalax Exploration Key|)",
+      "category": [
+        "[5] Bonus Games",
+        "[5] Xalax"
+      ],
+      "sort-key": "5-4-2"
+    },
+    {
+      "name": "NPC: (player)",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Ben",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Captain Geoff",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Doctor Dave",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Fireman Gavin",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Fisherman",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Foreman Stu",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Gillian",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Jan",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Jay",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Jimmy",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Laura",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Mike the Postman",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Nurse Nikki",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Pauline",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: PC Bobby",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Rachel",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Sparky",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Steve",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Suzie",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Tony the Coastguard",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Workman Fred",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Workman Jon",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Workman Rob",
+      "requires": "|Sandy Bay Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[1] Sandy Bay"
+      ]
+    },
+    {
+      "name": "NPC: Achu",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "NPC: Alexandria Sanister",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "NPC: Bungo",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "NPC: Johnny Thunder",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "NPC: Mike",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "NPC: Morat",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "NPC: Pippin",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "NPC: Slyboots",
+      "requires": "|Dino Island Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[2] Dino Island"
+      ]
+    },
+    {
+      "name": "NPC: Altair",
+      "requires": "|Mars Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "NPC: Antares",
+      "requires": "|Mars Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "NPC: BB",
+      "requires": "|Mars Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "NPC: Doc (Mars)",
+      "requires": "|Mars Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "NPC: Scientist",
+      "requires": "|Mars Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "NPC: Vega",
+      "requires": "|Mars Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[3] Mars"
+      ]
+    },
+    {
+      "name": "NPC: Captain Ross",
+      "requires": "|Arctic Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "NPC: Chilly",
+      "requires": "|Arctic Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "NPC: Cosmo",
+      "requires": "|Arctic Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "NPC: Crystal",
+      "requires": "|Arctic Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "NPC: Doc (Arctic)",
+      "requires": "|Arctic Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "NPC: Frosty",
+      "requires": "|Arctic Exploration Key|",
+      "category": [
+        "[6] NPCs",
+        "[4] Arctic"
+      ]
+    },
+    {
+      "name": "NPC: Warrior",
+      "requires": "|Xalax Exploration Key|",
+      "category": [
+        "[6] NPCs",
         "[5] Xalax"
       ]
     }

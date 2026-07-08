@@ -4,28 +4,53 @@ from data.worlds import LegoWorld
 import data.worlds as worlds
 import data.strings as txt
 from mod.json_types import JsonObject
-from . import categories
+from . import categories, items, options
 
 all_regions_dict: dict[str, Region] = {}
 
 dino_island = all_regions_dict[worlds.dino_island.name] = Region(
   name=worlds.dino_island.name,
-  requires=req.custom_yaml_function(txt.Requirements.HAS_GOLDEN_BRICKS, '4')
+  requires=req.any(
+    req.all(
+      req.item_value(items.golden_brick_value, 4),
+      req.item_value(items.sandy_bay_race_value, 4)
+    ),
+    req.yaml_compare(options.save_mode, '>=', 2)
+  )
 )
 
 mars = all_regions_dict[worlds.mars.name] = Region(
   name=worlds.mars.name,
-  requires=req.custom_yaml_function(txt.Requirements.HAS_GOLDEN_BRICKS, '8')
+  requires=req.any(
+    req.all(
+      req.item_value(items.golden_brick_value, 8),
+      req.item_value(items.sandy_bay_race_value, 4)
+    ),
+    req.yaml_compare(options.save_mode, '>=', 2)
+  )
 )
 
 arctic = all_regions_dict[worlds.arctic.name] = Region(
   name=worlds.arctic.name,
-  requires=req.custom_yaml_function(txt.Requirements.HAS_GOLDEN_BRICKS, '9')
+  requires=req.any(
+    req.all(
+      req.item_value(items.golden_brick_value, 9),
+      req.item_value(items.sandy_bay_race_value, 4)
+    ),
+    req.yaml_compare(options.save_mode, '>=', 2)
+  )
 )
 
 xalax = all_regions_dict[worlds.xalax.name] = Region(
   name=worlds.xalax.name,
-  requires=req.custom_yaml_function(txt.Requirements.HAS_XALAX_ACCESS)
+  requires=req.any(
+    req.category(categories.boss_race_events, all=True),
+    req.yaml_compare(options.save_mode, '=', 3)
+  )
+)
+
+ephemeral = all_regions_dict[''] = Region(
+  name=txt.Regions.EPHEMERAL
 )
 
 sandy_bay = all_regions_dict[worlds.sandy_bay.name] = Region(

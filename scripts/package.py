@@ -11,6 +11,7 @@ from outputs.items import item_table
 from outputs.regions import region_table
 from outputs.locations import location_table
 from outputs.options import option_table
+from outputs.events import event_table
 from mod.json_types import JsonObject
 
 manual_name = f'Manual_{game.game}_{game.creator}'
@@ -26,7 +27,8 @@ for filename, contents in [
   ('categories', category_table),
   ('regions', region_table),
   ('locations', location_table),
-  ('options', option_table)
+  ('options', option_table),
+  ('events', event_table),
 ]:
   with open(f'src/data/{filename}.json', 'wt') as file:
     json.dump(contents, file, indent='  ')

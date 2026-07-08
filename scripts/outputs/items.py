@@ -1,6 +1,6 @@
 from typing import Iterable
 
-from mod.classes import Category, Item, ItemClassification
+from mod.classes import Category, Item, ItemClassification, Value
 from data.worlds import LegoWorld
 import data.worlds as worlds
 import data.strings as txt
@@ -29,13 +29,33 @@ def get_sort_key(category: Category, world: LegoWorld | None = None, index: int 
 
   return key_string.format(world_index=world_index, index=index)
 
+golden_brick_value = Value(txt.Items.Values.GOLDEN_BRICK)
+sandy_bay_race_value = Value(txt.Items.Values.SANDY_BAY)
+
+_race_keys_values: dict[str, dict[Value, int]] = {
+  race_name: {
+    golden_brick_value: 1
+  }
+  for world in worlds.boss_worlds
+  for race_name in world.race_names
+}
+
+_race_keys_values.update({
+  race_name: {
+    golden_brick_value: 1,
+    sandy_bay_race_value: 1
+  }
+  for race_name in worlds.sandy_bay.race_names
+})
+
 race_keys_dict = {
   race_name: Item(
     name=txt.Items.RACE_KEY.format(race=race_name),
     item_class=ItemClassification.PROGRESSION,
     count = 1,
     category=[categories.race_keys, categories.for_world(world)],
-    sort_key=get_sort_key(categories.race_keys, world, index)
+    sort_key=get_sort_key(categories.race_keys, world, index),
+    value=_race_keys_values[race_name]
   )
   for world in worlds.all_worlds
   for index, race_name in enumerate(world.race_names, 1)
@@ -50,11 +70,25 @@ boss_keys_dict = {
       ItemClassification.USEFUL: 1
     },
     category=[categories.boss_keys, categories.for_world(world)],
-    sort_key=get_sort_key(categories.boss_keys, world)
+    sort_key=get_sort_key(categories.boss_keys, world),
+    value={
+      golden_brick_value: 3
+    }
   )
   for world in worlds.boss_worlds
 }
 '''Mapping of world name to boss key item.'''
+
+bonus_game_keys_dict: dict[str, Item] = {
+  world.name: Item(
+    name=txt.Items.BONUS_GAME_KEY.format(world=world.name),
+    item_class=ItemClassification.PROGRESSION,
+    count=2,
+    category=[categories.bonus_game_keys, categories.for_world(world)],
+    sort_key=get_sort_key(categories.bonus_game_keys, world)
+  )
+  for world in worlds.all_worlds
+}
 
 exploration_keys_dict = {
   world.name: Item(
@@ -77,7 +111,7 @@ car_bonuses = [
   )
   for index, name in enumerate(
     [txt.Items.Bonus.GRIP, txt.Items.Bonus.SHIELD, txt.Items.Bonus.POWER],
-    start=1
+    start=1,
   )
 ]
 
@@ -85,11 +119,24 @@ grip_upgrade = car_bonuses[0]
 shield_upgrade = car_bonuses[1]
 power_upgrade = car_bonuses[2]
 
+traps = [
+  Item(
+    name=txt.Items.TRAP_TEMPLATE.format(name=trap),
+    item_class=ItemClassification.TRAP,
+    count=100,
+    category=[categories.traps],
+    sort_key=get_sort_key(categories.traps, index=index),
+  )
+  for index, trap in enumerate(txt.Items.TRAP_LIST, 1)
+]
+
 all_items: list[Item] = [
   *race_keys_dict.values(),
   *boss_keys_dict.values(),
   *exploration_keys_dict.values(),
   *car_bonuses,
+  *bonus_game_keys_dict.values(),
+  *traps,
 ]
 
 item_table: JsonObject = Item.to_json_output(all_items)

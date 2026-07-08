@@ -1,0 +1,26 @@
+{
+  "$schema": "../../schemas/Manual.events.schema.json",
+  "data": [
+    {
+      "name": "Dino Island boss accessible",
+      "category": [
+        "Boss Race Events"
+      ],
+      "copy_location": "Boss Race: Sam Sanister's Slammer (Check 1)"
+    },
+    {
+      "name": "Mars boss accessible",
+      "category": [
+        "Boss Race Events"
+      ],
+      "copy_location": "Boss Race: Riegel's Racetrack (Check 1)"
+    },
+    {
+      "name": "Arctic boss accessible",
+      "category": [
+        "Boss Race Events"
+      ],
+      "copy_location": "Boss Race: The Berg's Royal Rumble (Check 1)"
+    }
+  ]
+}
