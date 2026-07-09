@@ -4,6 +4,7 @@ from mod.classes import Category, Item, ItemClassification, Value
 from data.worlds import LegoWorld
 import data.worlds as worlds
 import data.strings as txt
+from mod.func import snake_case
 from . import categories
 from mod.json_types import JsonObject
 
@@ -73,6 +74,9 @@ boss_keys_dict = {
     sort_key=get_sort_key(categories.boss_keys, world),
     value={
       golden_brick_value: 3
+    },
+    extra_data={
+      'boss_key_type': 'xalax' if world is worlds.xalax else 'boss'
     }
   )
   for world in worlds.boss_worlds
@@ -126,9 +130,23 @@ traps = [
     count=0,
     category=[categories.traps],
     sort_key=get_sort_key(categories.traps, index=index),
+    extra_data={
+      'item_weighting': f'weight_{snake_case(trap)}'
+    },
   )
   for index, trap in enumerate(txt.Items.TRAP_LIST, 1)
 ]
+
+filler_item = Item(
+  name=txt.Items.CHEESE_WEDGE,
+  item_class=ItemClassification.FILLER,
+  count=0,
+  category=[],
+  sort_key='0',
+  extra_data={
+    'item_weighting': 'weight_cheese_wedge_brick'
+  },
+)
 
 all_items: list[Item] = [
   *race_keys_dict.values(),
@@ -137,6 +155,7 @@ all_items: list[Item] = [
   *car_bonuses,
   *bonus_game_keys_dict.values(),
   *traps,
+  filler_item
 ]
 
 item_table: JsonObject = Item.to_json_output(all_items)

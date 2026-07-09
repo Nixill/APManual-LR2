@@ -2,6 +2,7 @@ from data.worlds import LegoWorld, all_worlds
 from mod.classes import Category
 import data.strings as txt
 from mod.json_types import JsonObject
+from . import options
 
 world_categories: dict[str, Category] = {
   world.name: Category(txt.Categories.WORLDS.format(index=world.world_index, world_name=world.name))
@@ -31,8 +32,15 @@ standard_races = Category(txt.Categories.Locations.STANDARD_RACES)
 boss_races = Category(txt.Categories.Locations.BOSS_RACES)
 golden_bricks = Category(txt.Categories.Locations.GOLDEN_BRICKS)
 bonus_games = Category(txt.Categories.Locations.BONUS_GAMES)
-npcs = Category(txt.Categories.Locations.NPCS)
+npcs = Category(
+  name=txt.Categories.Locations.NPCS,
+  options=[options.enable_npc_checks]
+)
 bonus_game_unlocks = Category(txt.Categories.Locations.BONUS_GAME_UNLOCKS)
+final_boss_races = Category(
+  txt.Categories.Locations.FINAL_BOSS,
+  hidden=True
+)
 
 location_categories = [
   standard_races,
@@ -40,7 +48,8 @@ location_categories = [
   golden_bricks,
   bonus_games,
   npcs,
-  bonus_game_unlocks
+  bonus_game_unlocks,
+  final_boss_races,
 ]
 
 boss_race_events = Category(txt.Categories.Events.BOSS_RACES, hidden=True)

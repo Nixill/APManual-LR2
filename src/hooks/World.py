@@ -1,6 +1,7 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
-from ..nixcode.options import remove_extra_boss_checks, validate_options_early
+from ..nixcode.options import remove_extra_boss_checks, update_item_config, validate_options_early
+from ..nixcode.func import debug
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
@@ -64,6 +65,13 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
                 if location.name in locationNamesToRemove:
                     region.locations.remove(location)
 
+    #TODO REMOVE THIS
+    debug(lambda: f'Locations: {[
+        location.name
+        for region in multiworld.regions if region.player == player
+        for location in region.locations
+    ]}')
+
 # This hook allows you to access the item names & counts before the items are created. Use this to increase/decrease the amount of a specific item in the pool
 # Valid item_config key/values:
 # {"Item Name": 5} <- This will create qty 5 items using all the default settings
@@ -73,6 +81,7 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 #       will create 5 items that are the "useful trap" class
 # {"Item Name": {ItemClassification.useful: 5}} <- You can also use the classification directly
 def before_create_items_all(item_config: dict[str, int|dict], world: World, multiworld: MultiWorld, player: int) -> dict[str, int|dict]:
+    item_config = update_item_config(item_config, world)
     return item_config
 
 # The item pool before starting items are processed, in case you want to see the raw item pool at that stage

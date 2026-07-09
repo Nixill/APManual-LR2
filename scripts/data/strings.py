@@ -4,19 +4,20 @@ class Categories:
   class Events:
     BOSS_RACES = 'Boss Race Events'
   class Items:
-    BONUS_GAME_KEYS = '[03] Bonus Game Keys'
+    BONUS_GAME_KEYS = '[0.3] Bonus Game Keys'
     BOSS_KEYS = '[7] Boss Keys'
-    CAR_BONUSES = '[02] Car Bonuses'
+    CAR_BONUSES = '[0.2] Car Bonuses'
     EXPLORATION_KEYS = '[8] Exploration Keys'
     RACE_KEYS = '[6] Race Keys'
-    TRAPS = '[01] Traps'
+    TRAPS = '[0.1] Traps'
   class Locations:
     BONUS_GAME_UNLOCKS = '[0] Bonus Game Unlocks'
-    BONUS_GAMES = '[5] Bonus Games'
-    BOSS_RACES = '[3] Boss Races'
-    GOLDEN_BRICKS = '[4] Golden Bricks'
-    NPCS = '[6] NPCs'
-    STANDARD_RACES = '[2] Standard Races'
+    BONUS_GAMES = '[9] Bonus Games'
+    BOSS_RACES = '[7] Boss Races'
+    FINAL_BOSS = 'Final Boss'
+    GOLDEN_BRICKS = '[8] Golden Bricks'
+    NPCS = '[A] NPCs'
+    STANDARD_RACES = '[6] Standard Races'
 
 class ExtraData:
   class Keys:
@@ -30,11 +31,12 @@ class Items:
     SHIELD = 'Shield Upgrade'
   BONUS_GAME_KEY = '{world} Bonus Game Key'
   BOSS_KEY = '{world} Boss Key'
+  CHEESE_WEDGE = 'Cheese Wedge Brick'
   EXPLORATION_KEY = '{world} Exploration Key'
   RACE_KEY = '{race} Race Key'
   class SortKeys:
     RACE_KEYS = '{world_index}-1-{index}'
-    BOSS_KEYS = '{world_index}-2  '
+    BOSS_KEYS = '{world_index}-2'
     EXPLORATION_KEYS = '{world_index}-3'
     BONUS_GAME_KEYS = '{world_index}-4'
     TRAPS = '0-1-{index}'

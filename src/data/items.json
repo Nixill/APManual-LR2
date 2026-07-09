@@ -3,281 +3,495 @@
   "data": [
     {
       "name": "Dig-a-Brick Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[1] Sandy Bay"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "1-1-1"
     },
     {
       "name": "Express Delivery Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[1] Sandy Bay"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "1-1-2"
     },
     {
       "name": "Hot Stuff Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[1] Sandy Bay"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "1-1-3"
     },
     {
       "name": "Bobby's Beat Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[1] Sandy Bay"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "1-1-4"
     },
     {
       "name": "Tribal Trouble Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[2] Dino Island"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "2-1-1"
     },
     {
       "name": "Dino Dodgems Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[2] Dino Island"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "2-1-2"
     },
     {
       "name": "The Lost Race World Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[2] Dino Island"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "2-1-3"
     },
     {
       "name": "Cretaceous Canyon Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[2] Dino Island"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "2-1-4"
     },
     {
       "name": "The Phobos Anomaly Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[3] Mars"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "3-1-1"
     },
     {
       "name": "Red Run Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[3] Mars"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "3-1-2"
     },
     {
       "name": "Deimos Derby Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[3] Mars"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "3-1-3"
     },
     {
       "name": "Contact Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[3] Mars"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "3-1-4"
     },
     {
       "name": "Winter Wonderland Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[4] Arctic"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "4-1-1"
     },
     {
       "name": "Ice Canyons Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[4] Arctic"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "4-1-2"
     },
     {
       "name": "Slip Sliding Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[4] Arctic"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "4-1-3"
     },
     {
       "name": "Chill Thrill Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[4] Arctic"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "4-1-4"
     },
     {
       "name": "Wheeled Warriors Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[5] Xalax"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "5-1-1"
     },
     {
       "name": "Smash 'n' Bash Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[5] Xalax"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "5-1-2"
     },
     {
       "name": "Vertigo Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[5] Xalax"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "5-1-3"
     },
     {
       "name": "Beyond the Dome Race Key",
+      "category": [
+        "[6] Race Keys",
+        "[5] Xalax"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "5-1-4"
     },
     {
       "name": "Dino Island Boss Key",
+      "category": [
+        "[7] Boss Keys",
+        "[2] Dino Island"
+      ],
       "classification_count": {
         "progression": 1,
-        "useful": 1
+        "useful": 0
       },
-      "sort-key": "2-2  "
+      "sort-key": "2-2",
+      "extra_data": {
+        "boss_key_type": "boss"
+      }
     },
     {
       "name": "Mars Boss Key",
+      "category": [
+        "[7] Boss Keys",
+        "[3] Mars"
+      ],
       "classification_count": {
         "progression": 1,
-        "useful": 1
+        "useful": 0
       },
-      "sort-key": "3-2  "
+      "sort-key": "3-2",
+      "extra_data": {
+        "boss_key_type": "boss"
+      }
     },
     {
       "name": "Arctic Boss Key",
+      "category": [
+        "[7] Boss Keys",
+        "[4] Arctic"
+      ],
       "classification_count": {
         "progression": 1,
-        "useful": 1
+        "useful": 0
       },
-      "sort-key": "4-2  "
+      "sort-key": "4-2",
+      "extra_data": {
+        "boss_key_type": "boss"
+      }
     },
     {
       "name": "Xalax Boss Key",
+      "category": [
+        "[7] Boss Keys",
+        "[5] Xalax"
+      ],
       "classification_count": {
         "progression": 1,
-        "useful": 1
+        "useful": 0
       },
-      "sort-key": "5-2  "
+      "sort-key": "5-2",
+      "extra_data": {
+        "boss_key_type": "xalax"
+      }
     },
     {
       "name": "Sandy Bay Exploration Key",
+      "category": [
+        "[8] Exploration Keys",
+        "[1] Sandy Bay"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "1-3"
     },
     {
       "name": "Dino Island Exploration Key",
+      "category": [
+        "[8] Exploration Keys",
+        "[2] Dino Island"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "2-3"
     },
     {
       "name": "Mars Exploration Key",
+      "category": [
+        "[8] Exploration Keys",
+        "[3] Mars"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "3-3"
     },
     {
       "name": "Arctic Exploration Key",
+      "category": [
+        "[8] Exploration Keys",
+        "[4] Arctic"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "4-3"
     },
     {
       "name": "Xalax Exploration Key",
+      "category": [
+        "[8] Exploration Keys",
+        "[5] Xalax"
+      ],
       "progression": true,
       "count": 1,
       "sort-key": "5-3"
     },
     {
       "name": "Grip Upgrade",
+      "category": [
+        "[0.2] Car Bonuses"
+      ],
       "progression": true,
       "count": 10,
       "sort-key": "0-2-1"
     },
     {
       "name": "Shield Upgrade",
+      "category": [
+        "[0.2] Car Bonuses"
+      ],
       "progression": true,
       "count": 10,
       "sort-key": "0-2-2"
     },
     {
       "name": "Power Upgrade",
+      "category": [
+        "[0.2] Car Bonuses"
+      ],
       "progression": true,
       "count": 10,
       "sort-key": "0-2-3"
     },
     {
       "name": "Sandy Bay Bonus Game Key",
+      "category": [
+        "[0.3] Bonus Game Keys",
+        "[1] Sandy Bay"
+      ],
       "progression": true,
       "count": 2,
       "sort-key": "1-4"
     },
     {
       "name": "Dino Island Bonus Game Key",
+      "category": [
+        "[0.3] Bonus Game Keys",
+        "[2] Dino Island"
+      ],
       "progression": true,
       "count": 2,
       "sort-key": "2-4"
     },
     {
       "name": "Mars Bonus Game Key",
+      "category": [
+        "[0.3] Bonus Game Keys",
+        "[3] Mars"
+      ],
       "progression": true,
       "count": 2,
       "sort-key": "3-4"
     },
     {
       "name": "Arctic Bonus Game Key",
+      "category": [
+        "[0.3] Bonus Game Keys",
+        "[4] Arctic"
+      ],
       "progression": true,
       "count": 2,
       "sort-key": "4-4"
     },
     {
       "name": "Xalax Bonus Game Key",
+      "category": [
+        "[0.3] Bonus Game Keys",
+        "[5] Xalax"
+      ],
       "progression": true,
       "count": 2,
       "sort-key": "5-4"
     },
     {
       "name": "TRAP - Item embargo",
+      "category": [
+        "[0.1] Traps"
+      ],
       "trap": true,
-      "count": 100,
-      "sort-key": "0-1-1"
+      "count": 0,
+      "sort-key": "0-1-1",
+      "extra_data": {
+        "item_weighting": "weight_item_embargo"
+      }
     },
     {
       "name": "TRAP - Freeze",
+      "category": [
+        "[0.1] Traps"
+      ],
       "trap": true,
-      "count": 100,
-      "sort-key": "0-1-2"
+      "count": 0,
+      "sort-key": "0-1-2",
+      "extra_data": {
+        "item_weighting": "weight_freeze"
+      }
     },
     {
       "name": "TRAP - Destroy your car",
+      "category": [
+        "[0.1] Traps"
+      ],
       "trap": true,
-      "count": 100,
-      "sort-key": "0-1-3"
+      "count": 0,
+      "sort-key": "0-1-3",
+      "extra_data": {
+        "item_weighting": "weight_destroy_your_car"
+      }
     },
     {
       "name": "TRAP - No pitstops",
+      "category": [
+        "[0.1] Traps"
+      ],
       "trap": true,
-      "count": 100,
-      "sort-key": "0-1-4"
+      "count": 0,
+      "sort-key": "0-1-4",
+      "extra_data": {
+        "item_weighting": "weight_no_pitstops"
+      }
     },
     {
       "name": "TRAP - No shortcuts",
+      "category": [
+        "[0.1] Traps"
+      ],
       "trap": true,
-      "count": 100,
-      "sort-key": "0-1-5"
+      "count": 0,
+      "sort-key": "0-1-5",
+      "extra_data": {
+        "item_weighting": "weight_no_shortcuts"
+      }
     },
     {
       "name": "TRAP - Drive in reverse",
+      "category": [
+        "[0.1] Traps"
+      ],
       "trap": true,
-      "count": 100,
-      "sort-key": "0-1-6"
+      "count": 0,
+      "sort-key": "0-1-6",
+      "extra_data": {
+        "item_weighting": "weight_drive_in_reverse"
+      }
     },
     {
       "name": "TRAP - Top-down camera",
+      "category": [
+        "[0.1] Traps"
+      ],
       "trap": true,
-      "count": 100,
-      "sort-key": "0-1-7"
+      "count": 0,
+      "sort-key": "0-1-7",
+      "extra_data": {
+        "item_weighting": "weight_top_down_camera"
+      }
     },
     {
       "name": "TRAP - Quit adventure",
+      "category": [
+        "[0.1] Traps"
+      ],
       "trap": true,
-      "count": 100,
-      "sort-key": "0-1-8"
+      "count": 0,
+      "sort-key": "0-1-8",
+      "extra_data": {
+        "item_weighting": "weight_quit_adventure"
+      }
+    },
+    {
+      "name": "Cheese Wedge Brick",
+      "filler": true,
+      "count": 0,
+      "sort-key": "0",
+      "extra_data": {
+        "item_weighting": "weight_cheese_wedge_brick"
+      }
     }
   ]
 }

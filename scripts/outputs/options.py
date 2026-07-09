@@ -118,11 +118,28 @@ item_weightings = [
   for trap in [*txt.Items.TRAP_LIST, 'Cheese Wedge Brick']
 ]
 
-enable_talksanity = ToggleOption(
-  name='enable_talksanity',
-  display_name='Enable Talksanity',
+car_bonus_weightings = [
+  RangeOption(
+    name=f'weight_{snake_case(car_bonus)}',
+    range_start=0,
+    range_end=10,
+    default=10,
+    display_name=f'Weight of {car_bonus}',
+    description=[
+      *wrap(f'Relative weight for generating {car_bonus} as a progression item.'),
+      '',
+      *wrap(f'Exactly ten car bonuses must be selected. If you put fewer between these three options, the remainder will be made up at random.')
+    ],
+    group=txt.Options.Groups.ITEM_WEIGHTING
+  )
+  for car_bonus in ['Grip', 'Shield', 'Power']
+]
+
+enable_npc_checks = ToggleOption(
+  name='enable_npc_checks',
+  display_name='Enable NPC Checks',
   description=[
-    *wrap('Enable talksanity?'),
+    *wrap('Enable NPC checks?'),
     '',
     *wrap('Adds a check for every NPC in the game. This check is performed when you see the named character speak in any situation.')
   ],
@@ -140,6 +157,8 @@ all_options = [
   xalax_keys_needed,
   boss_check_count,
   *item_weightings,
+  *car_bonus_weightings,
+  enable_npc_checks,
 ]
 
 option_table: JsonObject = Option.to_json_output(all_options)

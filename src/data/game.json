@@ -2,7 +2,14 @@
   "$schema": "../../schemas/Manual.game.schema.json",
   "game": "LEGORacers2",
   "creator": "Nixill",
-  "filler_item_name": "Cheese Wedge Brick",
+  "filler_item_name": "Nothing",
+  "starting_items": [
+    {
+      "items": [
+        "Sandy Bay Exploration Key"
+      ]
+    }
+  ],
   "death_link": true,
-  "build": 5
+  "build": 27
 }

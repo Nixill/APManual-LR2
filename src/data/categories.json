@@ -5,18 +5,25 @@
   "[3] Mars": {},
   "[4] Arctic": {},
   "[5] Xalax": {},
-  "[03] Bonus Game Keys": {},
+  "[0.3] Bonus Game Keys": {},
   "[7] Boss Keys": {},
-  "[02] Car Bonuses": {},
+  "[0.2] Car Bonuses": {},
   "[8] Exploration Keys": {},
   "[6] Race Keys": {},
-  "[01] Traps": {},
-  "[2] Standard Races": {},
-  "[3] Boss Races": {},
-  "[4] Golden Bricks": {},
-  "[5] Bonus Games": {},
-  "[6] NPCs": {},
+  "[0.1] Traps": {},
+  "[6] Standard Races": {},
+  "[7] Boss Races": {},
+  "[8] Golden Bricks": {},
+  "[9] Bonus Games": {},
+  "[A] NPCs": {
+    "yaml_option": [
+      "enable_npc_checks"
+    ]
+  },
   "[0] Bonus Game Unlocks": {},
+  "Final Boss": {
+    "hidden": true
+  },
   "Boss Race Events": {
     "hidden": true
   }

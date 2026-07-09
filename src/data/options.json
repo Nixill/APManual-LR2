@@ -99,9 +99,29 @@
       "range_start": 10,
       "range_end": 100
     },
+    "boss_check_count": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "display_name": "Boss Check Count",
+      "description": [
+        "How many checks is each boss race worth?",
+        "",
+        "The Grand Finale is not worth any checks, as finishing that race is",
+        "simply The Goal. In a future version of this AP with customizable goal",
+        "support, The Grand Finale will be adjustable here."
+      ],
+      "default": 5,
+      "group": "Others",
+      "range_start": 1,
+      "range_end": 10
+    },
     "weight_item_embargo": {
       "type": "Range",
       "rich_text_doc": true,
+      "display_name": "Weight of Item embargo",
+      "description": [
+        "Relative weight for generating Item embargo as filler."
+      ],
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
@@ -110,6 +130,10 @@
     "weight_freeze": {
       "type": "Range",
       "rich_text_doc": true,
+      "display_name": "Weight of Freeze",
+      "description": [
+        "Relative weight for generating Freeze as filler."
+      ],
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
@@ -118,6 +142,10 @@
     "weight_destroy_your_car": {
       "type": "Range",
       "rich_text_doc": true,
+      "display_name": "Weight of Destroy your car",
+      "description": [
+        "Relative weight for generating Destroy your car as filler."
+      ],
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
@@ -126,6 +154,10 @@
     "weight_no_pitstops": {
       "type": "Range",
       "rich_text_doc": true,
+      "display_name": "Weight of No pitstops",
+      "description": [
+        "Relative weight for generating No pitstops as filler."
+      ],
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
@@ -134,6 +166,10 @@
     "weight_no_shortcuts": {
       "type": "Range",
       "rich_text_doc": true,
+      "display_name": "Weight of No shortcuts",
+      "description": [
+        "Relative weight for generating No shortcuts as filler."
+      ],
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
@@ -142,6 +178,10 @@
     "weight_drive_in_reverse": {
       "type": "Range",
       "rich_text_doc": true,
+      "display_name": "Weight of Drive in reverse",
+      "description": [
+        "Relative weight for generating Drive in reverse as filler."
+      ],
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
@@ -150,6 +190,10 @@
     "weight_top_down_camera": {
       "type": "Range",
       "rich_text_doc": true,
+      "display_name": "Weight of Top-down camera",
+      "description": [
+        "Relative weight for generating Top-down camera as filler."
+      ],
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
@@ -158,18 +202,84 @@
     "weight_quit_adventure": {
       "type": "Range",
       "rich_text_doc": true,
+      "display_name": "Weight of Quit adventure",
+      "description": [
+        "Relative weight for generating Quit adventure as filler."
+      ],
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
       "range_end": 100
     },
-    "weight_filler": {
+    "weight_cheese_wedge_brick": {
       "type": "Range",
       "rich_text_doc": true,
+      "display_name": "Weight of Cheese Wedge Brick",
+      "description": [
+        "Relative weight for generating Cheese Wedge Brick as filler."
+      ],
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
       "range_end": 100
+    },
+    "weight_grip": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "display_name": "Weight of Grip",
+      "description": [
+        "Relative weight for generating Grip as a progression item.",
+        "",
+        "Exactly ten car bonuses must be selected. If you put fewer between",
+        "these three options, the remainder will be made up at random."
+      ],
+      "default": 10,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 10
+    },
+    "weight_shield": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "display_name": "Weight of Shield",
+      "description": [
+        "Relative weight for generating Shield as a progression item.",
+        "",
+        "Exactly ten car bonuses must be selected. If you put fewer between",
+        "these three options, the remainder will be made up at random."
+      ],
+      "default": 10,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 10
+    },
+    "weight_power": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "display_name": "Weight of Power",
+      "description": [
+        "Relative weight for generating Power as a progression item.",
+        "",
+        "Exactly ten car bonuses must be selected. If you put fewer between",
+        "these three options, the remainder will be made up at random."
+      ],
+      "default": 10,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 10
+    },
+    "enable_npc_checks": {
+      "type": "Toggle",
+      "rich_text_doc": true,
+      "display_name": "Enable NPC Checks",
+      "description": [
+        "Enable NPC checks?",
+        "",
+        "Adds a check for every NPC in the game. This check is performed when",
+        "you see the named character speak in any situation."
+      ],
+      "default": false,
+      "group": "Others"
     }
   }
 }

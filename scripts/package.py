@@ -23,7 +23,7 @@ with open(f'output/{manual_name}.build.log', 'rt') as file:
 # Build the JSON files from the data in these folders first
 for filename, contents in [
   ('game', game_table),
-  ('item', item_table),
+  ('items', item_table),
   ('categories', category_table),
   ('regions', region_table),
   ('locations', location_table),

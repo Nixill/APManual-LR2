@@ -247,7 +247,7 @@ class Item(HasName):
       raise ValueError('Item names cannot contain colons or parentheses.')
     self.name = name
     if item_class: self.item_class = item_class
-    if count: self.count = count
+    if isinstance(count, int): self.count = count
     if category: self.category = [name_of(cat) for cat in category]
     if classification_count: self.classification_count = dict(classification_count)
     if early: self.early = True
@@ -261,6 +261,7 @@ class Item(HasName):
     out: JsonObject = {
       'name': self.name
     }
+    if self.category: out['category'] = [name_of(cat) for cat in self.category]
     if self.classification_count:
       out['classification_count'] = {
         cls.to_string(): cnt
@@ -342,6 +343,7 @@ class Location(HasName):
     }
     if self.requires: out['requires'] = self.requires
     if self.category: out['category'] = list(self.category)
+    if self.victory: out['victory'] = True
     if self.place_item: out['place_item'] = list(self.place_item)
     if self.place_item_category: out['place_item_category'] = list(self.place_item_category)
     if self.dont_place_item: out['dont_place_item'] = list(self.dont_place_item)

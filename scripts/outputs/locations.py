@@ -54,6 +54,13 @@ for index, race_name in enumerate(worlds.sandy_bay.race_names, 1):
       req.item(this_race_key))
   else:
     requirement = req.item(this_race_key)
+  race_check_dict[race_name] = Location(
+    name=txt.Locations.STANDARD_RACE.format(index=index, race_name=race_name),
+    requires=requirement,
+    region=regions.for_world(worlds.sandy_bay),
+    category=[categories.standard_races, categories.for_world(worlds.sandy_bay)],
+    sort_key=get_sort_key(categories.standard_races, worlds.sandy_bay, index)
+  )
   _sandy_bay_keys.append(this_race_key)
 
 # Does not count Xalax (and Sandy Bay has no bosses)
@@ -61,8 +68,20 @@ boss_check_dict = {
   world.name: {
     index: Location(
       name=txt.Locations.BOSS_RACE.format(name=world.boss_race_name, i=index),
-      requires=req.option_count_percent(item=items.boss_keys_dict[world.name], option=options.boss_keys_needed),
+      requires=req.all(
+        req.item(item=items.boss_keys_dict[world.name], all=True),
+        req.any(
+          req.all(*(
+            req.item(item=items.race_keys_dict[race_name])
+            for race_name in world.race_names
+          )),
+          req.yaml_compare(options.save_mode, '=', 3)
+        )
+      ),
       region=regions.for_world(world),
+      extra_data={
+        'boss_check_count': index
+      },
       category=[categories.boss_races, categories.for_world(world)]
     )
     for index in range(1, 11)
@@ -70,16 +89,19 @@ boss_check_dict = {
   for world in worlds.mid_worlds
 }
 
-boss_check_dict[worlds.xalax.name] = {
-  index: Location(
-    name=txt.Locations.BOSS_RACE.format(name=worlds.xalax.boss_race_name, i=index),
-    requires=req.option_count_percent(item=items.boss_keys_dict[worlds.xalax.name], option=options.xalax_keys_needed),
-    extra_data={
-      'boss_check_count': index
-    }
-  )
-  for index in range(1, 11)
-}
+# # To be messed with when I actually have other goals.
+# boss_check_dict[worlds.xalax.name] = {
+#   index: Location(
+#     name=txt.Locations.BOSS_RACE.format(name=worlds.xalax.boss_race_name, i=index),
+#     requires=req.item(item=items.boss_keys_dict[worlds.xalax.name], all=True),
+#     region=regions.for_world(worlds.xalax),
+#     extra_data={
+#       'boss_check_count': index
+#     },
+#     category=[categories.boss_races, categories.for_world(worlds.xalax), categories.final_boss_races]
+#   )
+#   for index in range(1, 11)
+# }
 
 golden_brick_dict = {
   world.name: {
@@ -131,6 +153,26 @@ npc_list: list[Location] = [
   for npc in world.npc_names
 ]
 
+victory = Location(
+  name=txt.Locations.BOSS_RACE.format(name=worlds.xalax.boss_race_name, i=1),
+  requires=req.all(
+    req.item(item=items.boss_keys_dict[worlds.xalax.name], all=True),
+    req.any(
+      req.all(*(
+        req.item(item=items.race_keys_dict[race_name])
+        for race_name in worlds.xalax.race_names
+      )),
+      req.yaml_compare(options.save_mode, '=', 3)
+    )
+  ),
+  region=regions.for_world(worlds.xalax),
+  extra_data={
+    'boss_check_count': 1
+  },
+  category=[categories.boss_races, categories.for_world(worlds.xalax)],
+  victory=True
+)
+
 all_locations: list[Location] = [
   *race_check_dict.values(),
   *[boss_race
@@ -144,6 +186,7 @@ all_locations: list[Location] = [
     for world in bonus_game_completions.values()
     for comp in world.values()],
   *npc_list,
+  victory,
 ]
 
 location_table: JsonObject = Location.to_json_output(all_locations)

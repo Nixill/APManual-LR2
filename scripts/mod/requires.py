@@ -98,7 +98,7 @@ def yaml_compare(option: str | Option, symbol: ComparatorSymbol | str, value: st
     elif not isinstance(option, ToggleOption):
       raise TypeError(f'Bools can only be compared against ToggleOptions.')
 
-  return f'{{YamlCompare({option} {symbol} {value})}}' # completed type checking
+  return f'{{YamlCompare({option.name} {symbol} {value})}}' # completed type checking
 
 def custom_yaml_function(function_name: str, *function_args: str | HasName):
   return f'{{{function_name}({','.join((name_of(arg) for arg in function_args))})}}'
