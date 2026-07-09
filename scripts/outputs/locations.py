@@ -82,7 +82,8 @@ boss_check_dict = {
       extra_data={
         'boss_check_count': index
       },
-      category=[categories.boss_races, categories.for_world(world)]
+      category=[categories.boss_races, categories.for_world(world)],
+      sort_key=get_sort_key(categories.boss_races, world, index)
     )
     for index in range(1, 11)
   }
@@ -109,8 +110,8 @@ golden_brick_dict = {
       name=txt.Locations.GOLDEN_BRICK.format(world=world.name, name=brick),
       requires=req.item(item=items.exploration_keys_dict[world.name]),
       region=regions.for_world(world),
-      category=[categories.exploration_keys, categories.for_world(world)],
-      sort_key=get_sort_key(categories.exploration_keys, world, index)
+      category=[categories.golden_bricks, categories.for_world(world)],
+      sort_key=get_sort_key(categories.golden_bricks, world, index)
     )
     for index, brick in enumerate(world.golden_brick_names, 1)
   }
@@ -122,7 +123,8 @@ bonus_game_unlocks: list[Location] = [
     name=txt.Locations.BONUS_GAME_UNLOCK.format(i=index),
     requires=req.category(categories.car_bonuses, index),
     place_item_category=[categories.bonus_game_keys],
-    sort_key=get_sort_key(categories.bonus_game_unlocks, index=index)
+    sort_key=get_sort_key(categories.bonus_game_unlocks, index=index),
+    category=[categories.bonus_game_unlocks],
   )
   for index in range(1, 11)
 ]
@@ -136,7 +138,8 @@ bonus_game_completions: dict[str, dict[bool, Location]] = {
         req.item(items.exploration_keys_dict[world.name])
       ),
       category=[categories.bonus_games, categories.for_world(world)],
-      sort_key=get_sort_key(categories.bonus_games, world=world, index=2 if diff_is_hard else 1)
+      sort_key=get_sort_key(categories.bonus_games, world=world, index=2 if diff_is_hard else 1),
+      region=regions.for_world(world),
     )
     for diff_is_hard in [False, True]
   }
@@ -147,10 +150,12 @@ npc_list: list[Location] = [
   Location(
     name=txt.Locations.NPC.format(name=npc),
     requires=req.item(items.exploration_keys_dict[world.name]),
-    category=[categories.npcs, categories.for_world(world)]
+    category=[categories.npcs, categories.for_world(world)],
+    sort_key=get_sort_key(categories.npcs, world, index),
+    region=regions.for_world(world),
   )
   for world in worlds.all_worlds
-  for npc in world.npc_names
+  for index, npc in enumerate(world.npc_names, 1)
 ]
 
 victory = Location(

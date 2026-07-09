@@ -30,23 +30,40 @@ def get_sort_key(category: Category, world: LegoWorld | None = None, index: int 
 
   return key_string.format(world_index=world_index, index=index)
 
-golden_brick_value = Value(txt.Items.Values.GOLDEN_BRICK)
+gb_mars_value = Value(txt.Items.Values.GB_FOR_MARS)
+gb_arctic_value = Value(txt.Items.Values.GB_FOR_ARCTIC)
 sandy_bay_race_value = Value(txt.Items.Values.SANDY_BAY)
 
-_race_keys_values: dict[str, dict[Value, int]] = {
-  race_name: {
-    golden_brick_value: 1
-  }
-  for world in worlds.boss_worlds
-  for race_name in world.race_names
-}
+_race_keys_values: dict[str, dict[Value, int]] = {}
 
 _race_keys_values.update({
   race_name: {
-    golden_brick_value: 1,
+    gb_mars_value: 1,
+    gb_arctic_value: 1,
     sandy_bay_race_value: 1
   }
   for race_name in worlds.sandy_bay.race_names
+})
+
+_race_keys_values.update({
+  race_name: {
+    gb_arctic_value: 1,
+    gb_mars_value: 1
+  }
+  for race_name in worlds.dino_island.race_names
+})
+
+_race_keys_values.update({
+  race_name: {
+    gb_arctic_value: 1
+  }
+  for race_name in worlds.mars.race_names
+})
+
+_race_keys_values.update({
+  race_name: {}
+  for world in [worlds.arctic, worlds.xalax]
+  for race_name in world.race_names
 })
 
 race_keys_dict = {
@@ -72,9 +89,6 @@ boss_keys_dict = {
     },
     category=[categories.boss_keys, categories.for_world(world)],
     sort_key=get_sort_key(categories.boss_keys, world),
-    value={
-      golden_brick_value: 3
-    },
     extra_data={
       'boss_key_type': 'xalax' if world is worlds.xalax else 'boss'
     }
@@ -94,11 +108,28 @@ bonus_game_keys_dict: dict[str, Item] = {
   for world in worlds.all_worlds
 }
 
+_exploration_keys_values: dict[str, dict[Value, int]] = {
+  worlds.sandy_bay.name: {
+    gb_arctic_value: 3,
+    gb_mars_value: 3
+  },
+  worlds.dino_island.name: {
+    gb_arctic_value: 3,
+    gb_mars_value: 3
+  },
+  worlds.mars.name: {
+    gb_arctic_value: 3
+  },
+  worlds.arctic.name: {},
+  worlds.xalax.name: {}
+}
+
 exploration_keys_dict = {
   world.name: Item(
     name=txt.Items.EXPLORATION_KEY.format(world=world.name),
     item_class=ItemClassification.PROGRESSION,
     count=1,
+    value=_exploration_keys_values[world.name],
     category=[categories.exploration_keys, categories.for_world(world)],
     sort_key=get_sort_key(categories.exploration_keys, world)
   )

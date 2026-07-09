@@ -53,7 +53,8 @@ class Items:
   ]
   TRAP_TEMPLATE = 'TRAP - {name}'
   class Values:
-    GOLDEN_BRICK = 'gold_bricks'
+    GB_FOR_MARS = 'gold_bricks_for_mars'
+    GB_FOR_ARCTIC = 'gold_bricks_for_arctic'
     SANDY_BAY = 'sandy_bay_races'
 
 class Locations:

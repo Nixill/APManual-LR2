@@ -11,10 +11,7 @@ all_regions_dict: dict[str, Region] = {}
 dino_island = all_regions_dict[worlds.dino_island.name] = Region(
   name=worlds.dino_island.name,
   requires=req.any(
-    req.all(
-      req.item_value(items.golden_brick_value, 4),
-      req.item_value(items.sandy_bay_race_value, 4)
-    ),
+    req.item_value(items.sandy_bay_race_value, 4),
     req.yaml_compare(options.save_mode, '>=', 2)
   )
 )
@@ -23,7 +20,7 @@ mars = all_regions_dict[worlds.mars.name] = Region(
   name=worlds.mars.name,
   requires=req.any(
     req.all(
-      req.item_value(items.golden_brick_value, 8),
+      req.item_value(items.gb_mars_value, 8),
       req.item_value(items.sandy_bay_race_value, 4)
     ),
     req.yaml_compare(options.save_mode, '>=', 2)
@@ -34,7 +31,7 @@ arctic = all_regions_dict[worlds.arctic.name] = Region(
   name=worlds.arctic.name,
   requires=req.any(
     req.all(
-      req.item_value(items.golden_brick_value, 9),
+      req.item_value(items.gb_arctic_value, 9),
       req.item_value(items.sandy_bay_race_value, 4)
     ),
     req.yaml_compare(options.save_mode, '>=', 2)
@@ -44,7 +41,7 @@ arctic = all_regions_dict[worlds.arctic.name] = Region(
 xalax = all_regions_dict[worlds.xalax.name] = Region(
   name=worlds.xalax.name,
   requires=req.any(
-    req.category(categories.boss_race_events, all=True),
+    req.category(categories.boss_race_events, count=3),
     req.yaml_compare(options.save_mode, '=', 3)
   )
 )

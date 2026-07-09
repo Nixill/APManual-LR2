@@ -27,12 +27,12 @@ def validate_options_early(world: World) -> None:
     debug(lambda: f'get_item_count(): {get_item_count(boss_keys, xalax_keys)}')
     debug(lambda: f'get_location_count(): {get_location_count(boss_checks, npc_checks)}')
 
-    while get_item_count(boss_keys, xalax_keys) > get_location_count(boss_checks, npc_checks):
+    while get_item_count(boss_keys, xalax_keys) > get_location_count(boss_checks, npc_checks) - 5:
         debug(lambda: f'Discrepancy detected! Correcting...')
 
-        if boss_keys >= xalax_keys: boss_keys -= 1
-        if xalax_keys > boss_keys: xalax_keys -= 1
-        boss_checks += 1
+        if boss_keys >= xalax_keys: boss_keys = max(1, boss_keys - 1)
+        if xalax_keys > boss_keys: xalax_keys = max(1, xalax_keys - 1)
+        boss_checks = min(10, boss_checks + 1)
 
         debug(lambda: f'boss_keys: {boss_keys}')
         debug(lambda: f'boss_keys: {xalax_keys}')

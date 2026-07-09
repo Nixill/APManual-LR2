@@ -25,7 +25,7 @@ item_categories: list[Category] = [
   car_bonuses,
   exploration_keys,
   race_keys,
-  traps
+  traps,
 ]
 
 standard_races = Category(txt.Categories.Locations.STANDARD_RACES)

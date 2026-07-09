@@ -164,6 +164,9 @@ class Game:
     if self.death_link: out['death_link'] = True
     if self.starting_index > 1: out['starting_index'] = self.starting_index
     if self.unused_goals_are_locations: out['unused_goals_are_locations'] = True
+    if self.version: out['version'] = self.version
+    if self.extra_data: out['extra_data'] = dict(self.extra_data)
+    if self.comment: out['_comment'] = self.comment
     return out
 
   def to_json_output(self) -> JsonObject:
@@ -274,6 +277,7 @@ class Item(HasName):
       if ItemClassification.PROGRESSION in self.item_class: out['progression'] = True
       if ItemClassification.PROGRESSION_SKIP_BALANCING in self.item_class: out['progression_skip_balancing'] = True
       out['count'] = self.count
+    if self.value: out['value'] = dict(self.value)
     if self.early: out['early'] = True
     if self.local: out['local'] = True
     if self.sort_key: out['sort-key'] = self.sort_key
@@ -344,6 +348,7 @@ class Location(HasName):
     if self.requires: out['requires'] = self.requires
     if self.category: out['category'] = list(self.category)
     if self.victory: out['victory'] = True
+    if self.region: out['region'] = self.region
     if self.place_item: out['place_item'] = list(self.place_item)
     if self.place_item_category: out['place_item_category'] = list(self.place_item_category)
     if self.dont_place_item: out['dont_place_item'] = list(self.dont_place_item)

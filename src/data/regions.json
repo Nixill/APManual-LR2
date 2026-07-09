@@ -1,16 +1,16 @@
 {
   "$schema": "../../schemas/Manual.regions.schema.json",
   "Dino Island": {
-    "requires": "(({ItemValue(gold_bricks:4)} and {ItemValue(sandy_bay_races:4)}) or {YamlCompare(save_mode >= 2)})"
+    "requires": "({ItemValue(sandy_bay_races:4)} or {YamlCompare(save_mode >= 2)})"
   },
   "Mars": {
-    "requires": "(({ItemValue(gold_bricks:8)} and {ItemValue(sandy_bay_races:4)}) or {YamlCompare(save_mode >= 2)})"
+    "requires": "(({ItemValue(gold_bricks_for_mars:8)} and {ItemValue(sandy_bay_races:4)}) or {YamlCompare(save_mode >= 2)})"
   },
   "Arctic": {
-    "requires": "(({ItemValue(gold_bricks:9)} and {ItemValue(sandy_bay_races:4)}) or {YamlCompare(save_mode >= 2)})"
+    "requires": "(({ItemValue(gold_bricks_for_arctic:9)} and {ItemValue(sandy_bay_races:4)}) or {YamlCompare(save_mode >= 2)})"
   },
   "Xalax": {
-    "requires": "(|@Boss Race Events:ALL| or {YamlCompare(save_mode = 3)})"
+    "requires": "(|@Boss Race Events:3| or {YamlCompare(save_mode = 3)})"
   },
   "Ephemeral": {},
   "Sandy Bay": {
