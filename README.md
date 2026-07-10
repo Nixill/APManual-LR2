@@ -4,7 +4,6 @@ This is a **remake** of the LEGO Racers 2 AP (which is on the `racers-2-original
 ## Setup
 You need the following software:
 - A legally acquired copy of LEGO Racers 2 in your computer's CD Drive
-- The [Archipelago Manual Client](https://github.com/ManualForArchipelago/Manual/releases/) (this APWorld was tested with [Stable 20260319](https://github.com/ManualForArchipelago/Manual/releases/tag/manual_stable_20260319))
 - The [LEGO Racers 2 APWorld](https://github.com/Nixill/APManuals/releases?q=LEGO+Racers+2&expanded=true)
 
 It is assumed you are familiar with [setting up Archipelago](https://archipelago.gg/tutorial/Archipelago/setup_en) and [connecting the Manual Client](https://github.com/ManualForArchipelago/Manual/blob/main/docs/play/connect-client.md). If not, use those links for more information.
