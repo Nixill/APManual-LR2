@@ -179,6 +179,30 @@ filler_item = Item(
   },
 )
 
+save_modes = [
+  Item(
+    name=txt.Items.SAVE_MODE.format(mode=mode),
+    item_class=ItemClassification.FILLER,
+    category=[categories.run_settings],
+    sort_key='0-0-1',
+    extra_data={
+      'save_mode': index,
+      'remove': True,
+    },
+  )
+  for index, mode in enumerate(txt.Items.SAVE_MODE_LIST, 1)
+]
+
+npc_checks_enabled = Item(
+  name=txt.Items.NPC_CHECKS_ENABLED,
+  item_class=ItemClassification.FILLER,
+  category=[categories.run_settings],
+  sort_key='0-0-2',
+  extra_data={
+    'remove': True,
+  },
+)
+
 all_items: list[Item] = [
   *race_keys_dict.values(),
   *boss_keys_dict.values(),
@@ -186,7 +210,9 @@ all_items: list[Item] = [
   *car_bonuses,
   *bonus_game_keys_dict.values(),
   *traps,
-  filler_item
+  filler_item,
+  *save_modes,
+  npc_checks_enabled,
 ]
 
 item_table: JsonObject = Item.to_json_output(all_items)

@@ -5,12 +5,13 @@ from typing import Callable, TypeVar
 
 T = TypeVar('T')
 
-DEBUG_ENABLED = False
+DEBUG_ENABLED = True
 DEBUG_FUNCTIONS = [
     # 'adjust_filler_items',
     # 'after_create_regions',
     # 'validate_options_early',
     # 'update_item_config',
+    'grant_settings_items'
 ]
 
 def debug(msg: Callable[[], str]) -> None:

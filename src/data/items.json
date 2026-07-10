@@ -551,6 +551,57 @@
       "extra_data": {
         "item_weighting": "weight_cheese_wedge_brick"
       }
+    },
+    {
+      "name": "Save Mode - New Game",
+      "category": [
+        "[0.0] Run Settings"
+      ],
+      "filler": true,
+      "count": 1,
+      "sort-key": "0-0-1",
+      "extra_data": {
+        "save_mode": 1,
+        "remove": true
+      }
+    },
+    {
+      "name": "Save Mode - New Game With Cheats",
+      "category": [
+        "[0.0] Run Settings"
+      ],
+      "filler": true,
+      "count": 1,
+      "sort-key": "0-0-1",
+      "extra_data": {
+        "save_mode": 2,
+        "remove": true
+      }
+    },
+    {
+      "name": "Save Mode - Finished Save",
+      "category": [
+        "[0.0] Run Settings"
+      ],
+      "filler": true,
+      "count": 1,
+      "sort-key": "0-0-1",
+      "extra_data": {
+        "save_mode": 3,
+        "remove": true
+      }
+    },
+    {
+      "name": "NPC Checks Enabled",
+      "category": [
+        "[0.0] Run Settings"
+      ],
+      "filler": true,
+      "count": 1,
+      "sort-key": "0-0-2",
+      "extra_data": {
+        "remove": true
+      }
     }
   ]
 }

@@ -972,7 +972,7 @@
       "sort-key": "1-5-2"
     },
     {
-      "name": "NPC: Captain Geoff",
+      "name": "NPC: Doctor Dave",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -982,7 +982,7 @@
       "sort-key": "1-5-3"
     },
     {
-      "name": "NPC: Doctor Dave",
+      "name": "NPC: Fisherman",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -992,7 +992,7 @@
       "sort-key": "1-5-4"
     },
     {
-      "name": "NPC: Fireman Gavin",
+      "name": "NPC: Foreman Stu",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1002,7 +1002,7 @@
       "sort-key": "1-5-5"
     },
     {
-      "name": "NPC: Fisherman",
+      "name": "NPC: Gillian",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1012,7 +1012,7 @@
       "sort-key": "1-5-6"
     },
     {
-      "name": "NPC: Foreman Stu",
+      "name": "NPC: Jan",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1022,7 +1022,7 @@
       "sort-key": "1-5-7"
     },
     {
-      "name": "NPC: Gillian",
+      "name": "NPC: Jay",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1032,7 +1032,7 @@
       "sort-key": "1-5-8"
     },
     {
-      "name": "NPC: Jan",
+      "name": "NPC: Jimmy",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1042,7 +1042,7 @@
       "sort-key": "1-5-9"
     },
     {
-      "name": "NPC: Jay",
+      "name": "NPC: Laura",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1052,7 +1052,7 @@
       "sort-key": "1-5-10"
     },
     {
-      "name": "NPC: Jimmy",
+      "name": "NPC: Nurse Nikki",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1062,7 +1062,7 @@
       "sort-key": "1-5-11"
     },
     {
-      "name": "NPC: Laura",
+      "name": "NPC: Pauline",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1072,7 +1072,7 @@
       "sort-key": "1-5-12"
     },
     {
-      "name": "NPC: Mike the Postman",
+      "name": "NPC: Rachel",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1082,7 +1082,7 @@
       "sort-key": "1-5-13"
     },
     {
-      "name": "NPC: Nurse Nikki",
+      "name": "NPC: Sparky",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1092,7 +1092,7 @@
       "sort-key": "1-5-14"
     },
     {
-      "name": "NPC: Pauline",
+      "name": "NPC: Steve",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1102,7 +1102,7 @@
       "sort-key": "1-5-15"
     },
     {
-      "name": "NPC: PC Bobby",
+      "name": "NPC: Suzie",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1112,7 +1112,7 @@
       "sort-key": "1-5-16"
     },
     {
-      "name": "NPC: Rachel",
+      "name": "NPC: Tony the Coastguard",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1122,7 +1122,7 @@
       "sort-key": "1-5-17"
     },
     {
-      "name": "NPC: Sparky",
+      "name": "NPC: Workman Jon",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1132,56 +1132,6 @@
       "sort-key": "1-5-18"
     },
     {
-      "name": "NPC: Steve",
-      "requires": "|Sandy Bay Exploration Key|",
-      "category": [
-        "[A] NPCs",
-        "[1] Sandy Bay"
-      ],
-      "region": "Sandy Bay",
-      "sort-key": "1-5-19"
-    },
-    {
-      "name": "NPC: Suzie",
-      "requires": "|Sandy Bay Exploration Key|",
-      "category": [
-        "[A] NPCs",
-        "[1] Sandy Bay"
-      ],
-      "region": "Sandy Bay",
-      "sort-key": "1-5-20"
-    },
-    {
-      "name": "NPC: Tony the Coastguard",
-      "requires": "|Sandy Bay Exploration Key|",
-      "category": [
-        "[A] NPCs",
-        "[1] Sandy Bay"
-      ],
-      "region": "Sandy Bay",
-      "sort-key": "1-5-21"
-    },
-    {
-      "name": "NPC: Workman Fred",
-      "requires": "|Sandy Bay Exploration Key|",
-      "category": [
-        "[A] NPCs",
-        "[1] Sandy Bay"
-      ],
-      "region": "Sandy Bay",
-      "sort-key": "1-5-22"
-    },
-    {
-      "name": "NPC: Workman Jon",
-      "requires": "|Sandy Bay Exploration Key|",
-      "category": [
-        "[A] NPCs",
-        "[1] Sandy Bay"
-      ],
-      "region": "Sandy Bay",
-      "sort-key": "1-5-23"
-    },
-    {
       "name": "NPC: Workman Rob",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
@@ -1189,7 +1139,7 @@
         "[1] Sandy Bay"
       ],
       "region": "Sandy Bay",
-      "sort-key": "1-5-24"
+      "sort-key": "1-5-19"
     },
     {
       "name": "NPC: Achu",
@@ -1222,7 +1172,7 @@
       "sort-key": "2-5-3"
     },
     {
-      "name": "NPC: Johnny Thunder",
+      "name": "NPC: Mike",
       "requires": "|Dino Island Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1232,7 +1182,7 @@
       "sort-key": "2-5-4"
     },
     {
-      "name": "NPC: Mike",
+      "name": "NPC: Morat",
       "requires": "|Dino Island Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1242,26 +1192,6 @@
       "sort-key": "2-5-5"
     },
     {
-      "name": "NPC: Morat",
-      "requires": "|Dino Island Exploration Key|",
-      "category": [
-        "[A] NPCs",
-        "[2] Dino Island"
-      ],
-      "region": "Dino Island",
-      "sort-key": "2-5-6"
-    },
-    {
-      "name": "NPC: Pippin",
-      "requires": "|Dino Island Exploration Key|",
-      "category": [
-        "[A] NPCs",
-        "[2] Dino Island"
-      ],
-      "region": "Dino Island",
-      "sort-key": "2-5-7"
-    },
-    {
       "name": "NPC: Slyboots",
       "requires": "|Dino Island Exploration Key|",
       "category": [
@@ -1269,7 +1199,7 @@
         "[2] Dino Island"
       ],
       "region": "Dino Island",
-      "sort-key": "2-5-8"
+      "sort-key": "2-5-6"
     },
     {
       "name": "NPC: Altair",
@@ -1392,14 +1322,123 @@
       "sort-key": "4-5-6"
     },
     {
+      "name": "NPC: Captain Geoff",
+      "requires": "(|Sandy Bay Exploration Key| and |Sandy Bay Bonus Game Key|)",
+      "category": [
+        "[A] NPCs",
+        "[1] Sandy Bay"
+      ],
+      "region": "Sandy Bay",
+      "sort-key": "1-5-20"
+    },
+    {
+      "name": "NPC: Johnny Thunder",
+      "requires": "(|Dino Island Exploration Key| and |Dino Island Bonus Game Key|)",
+      "category": [
+        "[A] NPCs",
+        "[2] Dino Island"
+      ],
+      "region": "Dino Island",
+      "sort-key": "2-5-7"
+    },
+    {
+      "name": "NPC: Pippin",
+      "requires": "(|Dino Island Exploration Key| and |Dino Island Bonus Game Key|)",
+      "category": [
+        "[A] NPCs",
+        "[2] Dino Island"
+      ],
+      "region": "Dino Island",
+      "sort-key": "2-5-8"
+    },
+    {
       "name": "NPC: Warrior",
-      "requires": "|Xalax Exploration Key|",
+      "requires": "(|Xalax Exploration Key| and |Xalax Bonus Game Key|)",
       "category": [
         "[A] NPCs",
         "[5] Xalax"
       ],
       "region": "Xalax",
       "sort-key": "5-5-1"
+    },
+    {
+      "name": "NPC: Workman Fred",
+      "requires": "(|Dig-a-Brick Race Key| or {YamlCompare(save_mode <= 2)})",
+      "category": [
+        "[A] NPCs",
+        "[1] Sandy Bay"
+      ],
+      "region": "Sandy Bay",
+      "sort-key": "1-5-21"
+    },
+    {
+      "name": "NPC: Mike the Postman",
+      "requires": "(|Express Delivery Race Key| or {YamlCompare(save_mode <= 2)})",
+      "category": [
+        "[A] NPCs",
+        "[1] Sandy Bay"
+      ],
+      "region": "Sandy Bay",
+      "sort-key": "1-5-22"
+    },
+    {
+      "name": "NPC: Fireman Gavin",
+      "requires": "(|Hot Stuff Race Key| or {YamlCompare(save_mode <= 2)})",
+      "category": [
+        "[A] NPCs",
+        "[1] Sandy Bay"
+      ],
+      "region": "Sandy Bay",
+      "sort-key": "1-5-23"
+    },
+    {
+      "name": "NPC: PC Bobby",
+      "requires": "(|Bobby's Beat Race Key| or {YamlCompare(save_mode <= 2)})",
+      "category": [
+        "[A] NPCs",
+        "[1] Sandy Bay"
+      ],
+      "region": "Sandy Bay",
+      "sort-key": "1-5-24"
+    },
+    {
+      "name": "NPC: Sam Sanister",
+      "requires": "|Dino Island boss accessible|",
+      "category": [
+        "[A] NPCs",
+        "[2] Dino Island"
+      ],
+      "region": "Dino Island",
+      "sort-key": "2-5-9",
+      "extra_data": {
+        "exclude_if": "finished_save"
+      }
+    },
+    {
+      "name": "NPC: Riegel",
+      "requires": "|Mars boss accessible|",
+      "category": [
+        "[A] NPCs",
+        "[3] Mars"
+      ],
+      "region": "Mars",
+      "sort-key": "3-5-7",
+      "extra_data": {
+        "exclude_if": "finished_save"
+      }
+    },
+    {
+      "name": "NPC: The Berg",
+      "requires": "|Arctic boss accessible|",
+      "category": [
+        "[A] NPCs",
+        "[4] Arctic"
+      ],
+      "region": "Arctic",
+      "sort-key": "4-5-7",
+      "extra_data": {
+        "exclude_if": "finished_save"
+      }
     },
     {
       "name": "Boss Race: The Grand Finale (Check 1)",

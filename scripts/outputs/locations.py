@@ -146,6 +146,7 @@ bonus_game_completions: dict[str, dict[bool, Location]] = {
   for world in worlds.all_worlds
 }
 
+# List of NPCs in the game
 npc_list: list[Location] = [
   Location(
     name=txt.Locations.NPC.format(name=npc),
@@ -156,6 +157,52 @@ npc_list: list[Location] = [
   )
   for world in worlds.all_worlds
   for index, npc in enumerate(world.npc_names, 1)
+]
+
+# ... plus those in bonus games only
+npc_list += [
+  Location(
+    name=txt.Locations.NPC.format(name=npc),
+    requires=req.all(
+      req.item(items.exploration_keys_dict[world.name]),
+      req.item(items.bonus_game_keys_dict[world.name])
+    ),
+    category=[categories.npcs, categories.for_world(world)],
+    sort_key=get_sort_key(categories.npcs, world, index),
+    region=regions.for_world(world),
+  )
+  for world in worlds.all_worlds
+  for index, npc in enumerate(world.bonus_npc_names, len(world.npc_names) + 1)
+]
+
+# ... plus those at the start of Sandy Bay's races
+npc_list += [
+  Location(
+    name=txt.Locations.NPC.format(name=npc),
+    requires=req.any(
+      req.item(items.race_keys_dict[worlds.sandy_bay.race_names[i]]),
+      req.yaml_compare(options.save_mode, '<=', 2)
+    ),
+    category=[categories.npcs, categories.for_world(worlds.sandy_bay)],
+    sort_key=get_sort_key(categories.npcs, worlds.sandy_bay,
+                          i + len(worlds.sandy_bay.npc_names + worlds.sandy_bay.bonus_npc_names) + 1),
+    region=regions.sandy_bay
+  )
+  for i, npc in enumerate(worlds.sandy_bay.race_npc_names) # pyright: ignore[reportArgumentType]
+]
+
+npc_list += [
+  Location(
+    name=txt.Locations.NPC.format(name=world.boss_npc_name),
+    requires=req.item(txt.Events.BOSS_ACCESSIBLE.format(world=world.name)),
+    category=[categories.npcs, categories.for_world(world)],
+    sort_key=get_sort_key(categories.npcs, world, len(world.bonus_npc_names) + len(world.npc_names) + 1),
+    region=regions.for_world(world),
+    extra_data={
+      'exclude_if': 'finished_save'
+    }
+  )
+  for world in worlds.mid_worlds
 ]
 
 victory = Location(

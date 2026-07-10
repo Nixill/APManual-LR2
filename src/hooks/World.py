@@ -1,6 +1,6 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
-from ..nixcode.options import remove_extra_boss_checks, update_item_config, validate_options_early
+from ..nixcode.options import perform_final_grants, remove_boss_npc_checks, remove_extra_boss_checks, update_item_config, validate_options_early
 from ..nixcode.func import debug
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
@@ -54,7 +54,8 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     # Use this hook to remove locations from the world
     locationNamesToRemove: list[str] = [
-        *remove_extra_boss_checks(world)
+        *remove_extra_boss_checks(world),
+        *remove_boss_npc_checks(world)
     ] # List of location names
 
     # Add your code here to calculate which locations to remove
@@ -91,7 +92,7 @@ def before_create_items_starting(item_pool: list, world: World, multiworld: Mult
 # The item pool after starting items are processed but before filler is added, in case you want to see the raw item pool at that stage
 def before_create_items_filler(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
     # Use this hook to remove items from the item pool
-    itemNamesToRemove: list[str] = [] # List of item names
+    itemNamesToRemove: list[str] = perform_final_grants(item_pool, world) # List of item names
 
     # Add your code here to calculate which items to remove.
     #

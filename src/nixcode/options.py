@@ -1,6 +1,7 @@
 from typing import Any, Iterable
 
 from math import floor
+
 from .func import random_weight, debug
 from worlds.AutoWorld import World # pyright: ignore[reportMissingImports]
 from BaseClasses import MultiWorld, CollectionState, Item # pyright: ignore[reportMissingImports]
@@ -10,14 +11,15 @@ from ..Items import item_name_to_item
 def get_item_count(boss_keys: int, xalax_keys: int) -> int:
     return 34 + 3 * boss_keys + xalax_keys
 
-def get_location_count(boss_checks: int, npc_checks: bool) -> int:
-    return 45 + 3 * boss_checks + (45 if npc_checks else 0)
+def get_location_count(boss_checks: int, npc_checks: bool, finished_save: bool) -> int:
+    return 45 + 3 * boss_checks + ((45 if finished_save else 48) if npc_checks else 0)
 
-def validate_options_early(world: World) -> None:
+def balance_boss_keys(world: World) -> None:
     boss_keys = world.options.boss_keys_available.value
     xalax_keys = world.options.xalax_keys_available.value
     boss_checks = world.options.boss_check_count.value
     npc_checks = bool(world.options.enable_npc_checks.value)
+    finished_save = world.options.save_mode.value == 3
 
     debug(lambda: f'boss_keys: {boss_keys}')
     debug(lambda: f'xalax_keys: {xalax_keys}')
@@ -25,9 +27,9 @@ def validate_options_early(world: World) -> None:
     debug(lambda: f'npc_checks: {npc_checks}')
 
     debug(lambda: f'get_item_count(): {get_item_count(boss_keys, xalax_keys)}')
-    debug(lambda: f'get_location_count(): {get_location_count(boss_checks, npc_checks)}')
+    debug(lambda: f'get_location_count(): {get_location_count(boss_checks, npc_checks, finished_save)}')
 
-    while get_item_count(boss_keys, xalax_keys) > get_location_count(boss_checks, npc_checks) - 5:
+    while get_item_count(boss_keys, xalax_keys) > get_location_count(boss_checks, npc_checks, finished_save) - 5:
         debug(lambda: f'Discrepancy detected! Correcting...')
 
         if boss_keys >= xalax_keys: boss_keys = max(1, boss_keys - 1)
@@ -40,11 +42,14 @@ def validate_options_early(world: World) -> None:
         debug(lambda: f'boss_keys: {npc_checks}')
 
         debug(lambda: f'get_item_count(): {get_item_count(boss_keys, xalax_keys)}')
-        debug(lambda: f'get_location_count(): {get_location_count(boss_checks, npc_checks)}')
+        debug(lambda: f'get_location_count(): {get_location_count(boss_checks, npc_checks, finished_save)}')
 
     world.options.boss_keys_available.value = boss_keys
     world.options.xalax_keys_available.value = xalax_keys
     world.options.boss_check_count.value = boss_checks
+
+def validate_options_early(world: World) -> None:
+    balance_boss_keys(world)
 
 def remove_extra_boss_checks(world: World) -> Iterable[str]:
     max_count = world.options.boss_check_count.value
@@ -52,6 +57,14 @@ def remove_extra_boss_checks(world: World) -> Iterable[str]:
         if 'extra_data' in location and 'boss_check_count' in location['extra_data']:
             count = location['extra_data']['boss_check_count']
             if count > max_count: yield name
+
+def remove_boss_npc_checks(world: World) -> Iterable[str]:
+    if world.options.save_mode.value == 3:
+        for name, location in location_name_to_location.items():
+            if 'extra_data' in location \
+                and 'exclude_if' in location['extra_data'] \
+                and location['extra_data']['exclude_if'] == 'finished_save':
+                    yield name
 
 def correct_bonus_counts(item_config: dict[str, int|dict], world: World) -> None:
     grips = world.options.weight_grip.value
@@ -95,6 +108,7 @@ def update_item_config(item_config: dict[str, int|dict], world: World) -> dict[s
 
     boss_checks = world.options.boss_check_count.value
     npc_checks = bool(world.options.enable_npc_checks)
+    finished_save = world.options.save_mode.value == 3
 
     debug(lambda: f'boss_prog: {boss_prog}')
     debug(lambda: f'boss_use: {boss_use}')
@@ -102,7 +116,7 @@ def update_item_config(item_config: dict[str, int|dict], world: World) -> dict[s
     debug(lambda: f'xalax_use: {xalax_use}')
 
     item_count = get_item_count(boss_prog + boss_use, xalax_prog + xalax_use)
-    location_count = get_location_count(boss_checks, npc_checks)
+    location_count = get_location_count(boss_checks, npc_checks, finished_save)
 
     debug(lambda: f'item_count: {item_count}')
     debug(lambda: f'location_count: {location_count}')
@@ -149,3 +163,41 @@ def update_item_config(item_config: dict[str, int|dict], world: World) -> dict[s
         debug(lambda: f'New config: {item_config[selected_trap]}')
 
     return item_config
+
+def start_with_item(item_name: str, item_pool: list, world: World) -> None:
+    if item_name in world.start_inventory:
+        world.start_inventory[item_name] += 1
+    else:
+        world.start_inventory[item_name] = 1
+
+    item = next(i for i in item_pool if i.name == item_name)
+    world.multiworld.push_precollected(item)
+
+def grant_settings_items(item_pool: list, world: World) -> None:
+    debug(lambda: f'{world.start_inventory}')
+
+    save_mode = world.options.save_mode.current_key
+    debug(lambda: f'{save_mode}')
+
+    match save_mode:
+        case 'new_game': start_with_item('Save Mode - New Game', item_pool, world)
+        case 'new_game_with_cheats': start_with_item('Save Mode - New Game With Cheats', item_pool, world)
+        case 'finished_save': start_with_item('Save Mode - Finished Save', item_pool, world)
+
+    if world.options.enable_npc_checks:
+        start_with_item('NPC Checks Enabled', item_pool, world)
+
+    debug(lambda: f'{world.start_inventory}')
+    # This does not remove those items from the item pool as they don't exist in it in the first place.
+
+def perform_final_grants(item_pool: list, world: World) -> list[str]:
+    removals = []
+
+    for name, item in item_name_to_item.items():
+        data: dict[str, Any] = item.get('extra_data') # pyright: ignore[reportAssignmentType]
+        if data and 'remove' in data:
+            removals.append(name)
+
+    grant_settings_items(item_pool, world)
+
+    return removals

@@ -5,7 +5,7 @@ from . import categories
 
 boss_race_events: dict[str, Event] = {
   world.name: Event(
-    name=f'{world.name} boss accessible',
+    name=txt.Events.BOSS_ACCESSIBLE.format(world=world.name),
     copy_location=txt.Locations.BOSS_RACE.format(name=world.boss_race_name, i=1),
     category=[categories.boss_race_events]
   )

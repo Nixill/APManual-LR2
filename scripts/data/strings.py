@@ -9,6 +9,7 @@ class Categories:
     CAR_BONUSES = '[0.2] Car Bonuses'
     EXPLORATION_KEYS = '[8] Exploration Keys'
     RACE_KEYS = '[6] Race Keys'
+    RUN_SETTINGS = '[0.0] Run Settings'
     TRAPS = '[0.1] Traps'
   class Locations:
     BONUS_GAME_UNLOCKS = '[0] Bonus Game Unlocks'
@@ -18,6 +19,9 @@ class Categories:
     GOLDEN_BRICKS = '[8] Golden Bricks'
     NPCS = '[A] NPCs'
     STANDARD_RACES = '[6] Standard Races'
+
+class Events:
+  BOSS_ACCESSIBLE = '{world} boss accessible'
 
 class ExtraData:
   class Keys:
@@ -33,7 +37,14 @@ class Items:
   BOSS_KEY = '{world} Boss Key'
   CHEESE_WEDGE = 'Cheese Wedge Brick'
   EXPLORATION_KEY = '{world} Exploration Key'
+  NPC_CHECKS_ENABLED = 'NPC Checks Enabled'
   RACE_KEY = '{race} Race Key'
+  SAVE_MODE = 'Save Mode - {mode}'
+  SAVE_MODE_LIST = [
+    'New Game',
+    'New Game With Cheats',
+    'Finished Save'
+  ]
   class SortKeys:
     RACE_KEYS = '{world_index}-1-{index}'
     BOSS_KEYS = '{world_index}-2'

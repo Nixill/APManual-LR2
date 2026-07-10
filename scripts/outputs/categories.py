@@ -18,8 +18,10 @@ car_bonuses = Category(txt.Categories.Items.CAR_BONUSES)
 exploration_keys = Category(txt.Categories.Items.EXPLORATION_KEYS)
 race_keys = Category(txt.Categories.Items.RACE_KEYS)
 traps = Category(txt.Categories.Items.TRAPS)
+run_settings = Category(txt.Categories.Items.RUN_SETTINGS)
 
 item_categories: list[Category] = [
+  run_settings,
   bonus_game_keys,
   boss_keys,
   car_bonuses,
