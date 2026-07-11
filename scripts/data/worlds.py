@@ -18,7 +18,6 @@ sandy_bay = LegoWorld(
   boss_race_name=None,
   golden_brick_names=('Beachside', 'Cliffside', 'Mountain'),
   npc_names=[
-    '(player)',
     'Ben',
     'Doctor Dave',
     'Fisherman',

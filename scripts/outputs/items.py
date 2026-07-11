@@ -2,6 +2,7 @@ from typing import Iterable
 
 from mod.classes import Category, Item, ItemClassification, Value
 from data.worlds import LegoWorld
+import data.traps as traps
 import data.worlds as worlds
 import data.strings as txt
 from mod.func import snake_case
@@ -154,18 +155,32 @@ grip_upgrade = car_bonuses[0]
 shield_upgrade = car_bonuses[1]
 power_upgrade = car_bonuses[2]
 
-traps = [
+# traps = [
+#   Item(
+#     name=txt.Items.TRAP_TEMPLATE.format(name=trap),
+#     item_class=ItemClassification.TRAP,
+#     count=0,
+#     category=[categories.traps],
+#     sort_key=get_sort_key(categories.traps, index=index),
+#     extra_data={
+#       'item_weighting': f'weight_{snake_case(trap)}'
+#     },
+#   )
+#   for index, trap in enumerate(txt.Items.TRAP_LIST, 1)
+# ]
+
+trap_items = [
   Item(
-    name=txt.Items.TRAP_TEMPLATE.format(name=trap),
+    name=trap.name,
     item_class=ItemClassification.TRAP,
     count=0,
     category=[categories.traps],
     sort_key=get_sort_key(categories.traps, index=index),
     extra_data={
-      'item_weighting': f'weight_{snake_case(trap)}'
+      'item_weighting': f'weight_{snake_case(trap.name)}',
     },
   )
-  for index, trap in enumerate(txt.Items.TRAP_LIST, 1)
+  for index, trap in enumerate(traps.all_traps, 1)
 ]
 
 filler_item = Item(
@@ -209,7 +224,7 @@ all_items: list[Item] = [
   *exploration_keys_dict.values(),
   *car_bonuses,
   *bonus_game_keys_dict.values(),
-  *traps,
+  *trap_items,
   filler_item,
   *save_modes,
   npc_checks_enabled,

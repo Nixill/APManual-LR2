@@ -1,6 +1,7 @@
 from textwrap import wrap
 
 import data.strings as txt
+import data.traps as traps
 
 from mod.classes import DeathLinkOption, FillerTrapsOption, Option, RangeOption, ToggleOption, ChoiceOption
 from mod.json_types import JsonObject
@@ -105,26 +106,50 @@ boss_check_count = RangeOption(
 
 item_weightings = [
   RangeOption(
-    name=f'weight_{snake_case(trap)}',
+    name=f'filler_weight_{snake_case(trap.name)}',
     range_start=0,
     range_end=100,
-    default=50,
-    display_name=f'Weight of {trap}',
+    default=0 if trap.uses_cheats else trap.default_weight,
+    display_name=f'Filler items: Weight of {trap.name}',
     description=[
-      *wrap(f'Relative weight for generating {trap} as filler.')
+      *wrap(f'Relative weight for generating {trap.name} as filler.'),
+      '',
+      *[
+        line
+        for lines in [wrap(d) if d else [''] for d in trap.description]
+        for line in lines
+      ]
     ],
-    group=txt.Options.Groups.ITEM_WEIGHTING
+    group=txt.Options.Groups.ITEM_WEIGHTING,
+    values={
+      'disabled': 0,
+      'recommended': trap.default_weight
+    }
   )
-  for trap in [*txt.Items.TRAP_LIST, 'Cheese Wedge Brick']
+  for trap in traps.all_traps
 ]
+
+cheese_wedge_brick_weight = RangeOption(
+  name='filler_weight_cheese_wedge_brick',
+  range_start=0,
+  range_end=100,
+  default=50,
+  display_name=f'Filler items: Weight of Cheese Wedge Brick',
+  description=[
+    *wrap(f'Relative weight for generating Cheese Wedge Bricks as filler.'),
+    '',
+    'Cheese Wedge Brick does nothing.'
+  ],
+  group=txt.Options.Groups.ITEM_WEIGHTING
+)
 
 car_bonus_weightings = [
   RangeOption(
-    name=f'weight_{snake_case(car_bonus)}',
+    name=f'bonus_weight_{snake_case(car_bonus)}',
     range_start=0,
     range_end=10,
     default=10,
-    display_name=f'Weight of {car_bonus}',
+    display_name=f'Car bonuses: Weight of {car_bonus}',
     description=[
       *wrap(f'Relative weight for generating {car_bonus} as a progression item.'),
       '',
@@ -157,6 +182,7 @@ all_options = [
   xalax_keys_needed,
   boss_check_count,
   *item_weightings,
+  cheese_wedge_brick_weight,
   *car_bonus_weightings,
   enable_npc_checks,
 ]

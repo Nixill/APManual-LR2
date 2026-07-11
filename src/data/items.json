@@ -448,7 +448,7 @@
       "sort-key": "5-4"
     },
     {
-      "name": "TRAP - Item embargo",
+      "name": "Item embargo",
       "category": [
         "[0.1] Traps"
       ],
@@ -460,7 +460,7 @@
       }
     },
     {
-      "name": "TRAP - Freeze",
+      "name": "Freeze",
       "category": [
         "[0.1] Traps"
       ],
@@ -472,7 +472,7 @@
       }
     },
     {
-      "name": "TRAP - Destroy your car",
+      "name": "Destroy your car",
       "category": [
         "[0.1] Traps"
       ],
@@ -484,7 +484,7 @@
       }
     },
     {
-      "name": "TRAP - No pitstops",
+      "name": "No pitstops",
       "category": [
         "[0.1] Traps"
       ],
@@ -496,7 +496,7 @@
       }
     },
     {
-      "name": "TRAP - No shortcuts",
+      "name": "No shortcuts",
       "category": [
         "[0.1] Traps"
       ],
@@ -508,7 +508,7 @@
       }
     },
     {
-      "name": "TRAP - Drive in reverse",
+      "name": "Drive in reverse",
       "category": [
         "[0.1] Traps"
       ],
@@ -520,7 +520,7 @@
       }
     },
     {
-      "name": "TRAP - Top-down camera",
+      "name": "Top-down camera",
       "category": [
         "[0.1] Traps"
       ],
@@ -532,13 +532,25 @@
       }
     },
     {
-      "name": "TRAP - Quit adventure",
+      "name": "Speed boost",
       "category": [
         "[0.1] Traps"
       ],
       "trap": true,
       "count": 0,
       "sort-key": "0-1-8",
+      "extra_data": {
+        "item_weighting": "weight_speed_boost"
+      }
+    },
+    {
+      "name": "Quit adventure",
+      "category": [
+        "[0.1] Traps"
+      ],
+      "trap": true,
+      "count": 0,
+      "sort-key": "0-1-9",
       "extra_data": {
         "item_weighting": "weight_quit_adventure"
       }

@@ -52,16 +52,6 @@ class Items:
     BONUS_GAME_KEYS = '{world_index}-4'
     TRAPS = '0-1-{index}'
     CAR_BONUSES = '0-2-{index}'
-  TRAP_LIST = [
-    'Item embargo',
-    'Freeze',
-    'Destroy your car',
-    'No pitstops',
-    'No shortcuts',
-    'Drive in reverse',
-    'Top-down camera',
-    'Quit adventure'
-  ]
   TRAP_TEMPLATE = 'TRAP - {name}'
   class Values:
     GB_FOR_MARS = 'gold_bricks_for_mars'

@@ -12,7 +12,7 @@ def get_item_count(boss_keys: int, xalax_keys: int) -> int:
     return 34 + 3 * boss_keys + xalax_keys
 
 def get_location_count(boss_checks: int, npc_checks: bool, finished_save: bool) -> int:
-    return 45 + 3 * boss_checks + ((45 if finished_save else 48) if npc_checks else 0)
+    return 45 + 3 * boss_checks + ((44 if finished_save else 47) if npc_checks else 0)
 
 def balance_boss_keys(world: World) -> None:
     boss_keys = world.options.boss_keys_available.value

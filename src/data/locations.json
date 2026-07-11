@@ -952,7 +952,7 @@
       "sort-key": "5-4-2"
     },
     {
-      "name": "NPC: (player)",
+      "name": "NPC: Ben",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -962,7 +962,7 @@
       "sort-key": "1-5-1"
     },
     {
-      "name": "NPC: Ben",
+      "name": "NPC: Doctor Dave",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -972,7 +972,7 @@
       "sort-key": "1-5-2"
     },
     {
-      "name": "NPC: Doctor Dave",
+      "name": "NPC: Fisherman",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -982,7 +982,7 @@
       "sort-key": "1-5-3"
     },
     {
-      "name": "NPC: Fisherman",
+      "name": "NPC: Foreman Stu",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -992,7 +992,7 @@
       "sort-key": "1-5-4"
     },
     {
-      "name": "NPC: Foreman Stu",
+      "name": "NPC: Gillian",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1002,7 +1002,7 @@
       "sort-key": "1-5-5"
     },
     {
-      "name": "NPC: Gillian",
+      "name": "NPC: Jan",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1012,7 +1012,7 @@
       "sort-key": "1-5-6"
     },
     {
-      "name": "NPC: Jan",
+      "name": "NPC: Jay",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1022,7 +1022,7 @@
       "sort-key": "1-5-7"
     },
     {
-      "name": "NPC: Jay",
+      "name": "NPC: Jimmy",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1032,7 +1032,7 @@
       "sort-key": "1-5-8"
     },
     {
-      "name": "NPC: Jimmy",
+      "name": "NPC: Laura",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1042,7 +1042,7 @@
       "sort-key": "1-5-9"
     },
     {
-      "name": "NPC: Laura",
+      "name": "NPC: Nurse Nikki",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1052,7 +1052,7 @@
       "sort-key": "1-5-10"
     },
     {
-      "name": "NPC: Nurse Nikki",
+      "name": "NPC: Pauline",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1062,7 +1062,7 @@
       "sort-key": "1-5-11"
     },
     {
-      "name": "NPC: Pauline",
+      "name": "NPC: Rachel",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1072,7 +1072,7 @@
       "sort-key": "1-5-12"
     },
     {
-      "name": "NPC: Rachel",
+      "name": "NPC: Sparky",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1082,7 +1082,7 @@
       "sort-key": "1-5-13"
     },
     {
-      "name": "NPC: Sparky",
+      "name": "NPC: Steve",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1092,7 +1092,7 @@
       "sort-key": "1-5-14"
     },
     {
-      "name": "NPC: Steve",
+      "name": "NPC: Suzie",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1102,7 +1102,7 @@
       "sort-key": "1-5-15"
     },
     {
-      "name": "NPC: Suzie",
+      "name": "NPC: Tony the Coastguard",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1112,7 +1112,7 @@
       "sort-key": "1-5-16"
     },
     {
-      "name": "NPC: Tony the Coastguard",
+      "name": "NPC: Workman Jon",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
         "[A] NPCs",
@@ -1122,16 +1122,6 @@
       "sort-key": "1-5-17"
     },
     {
-      "name": "NPC: Workman Jon",
-      "requires": "|Sandy Bay Exploration Key|",
-      "category": [
-        "[A] NPCs",
-        "[1] Sandy Bay"
-      ],
-      "region": "Sandy Bay",
-      "sort-key": "1-5-18"
-    },
-    {
       "name": "NPC: Workman Rob",
       "requires": "|Sandy Bay Exploration Key|",
       "category": [
@@ -1139,7 +1129,7 @@
         "[1] Sandy Bay"
       ],
       "region": "Sandy Bay",
-      "sort-key": "1-5-19"
+      "sort-key": "1-5-18"
     },
     {
       "name": "NPC: Achu",
@@ -1329,7 +1319,7 @@
         "[1] Sandy Bay"
       ],
       "region": "Sandy Bay",
-      "sort-key": "1-5-20"
+      "sort-key": "1-5-19"
     },
     {
       "name": "NPC: Johnny Thunder",
@@ -1369,7 +1359,7 @@
         "[1] Sandy Bay"
       ],
       "region": "Sandy Bay",
-      "sort-key": "1-5-21"
+      "sort-key": "1-5-20"
     },
     {
       "name": "NPC: Mike the Postman",
@@ -1379,7 +1369,7 @@
         "[1] Sandy Bay"
       ],
       "region": "Sandy Bay",
-      "sort-key": "1-5-22"
+      "sort-key": "1-5-21"
     },
     {
       "name": "NPC: Fireman Gavin",
@@ -1389,7 +1379,7 @@
         "[1] Sandy Bay"
       ],
       "region": "Sandy Bay",
-      "sort-key": "1-5-23"
+      "sort-key": "1-5-22"
     },
     {
       "name": "NPC: PC Bobby",
@@ -1399,7 +1389,7 @@
         "[1] Sandy Bay"
       ],
       "region": "Sandy Bay",
-      "sort-key": "1-5-24"
+      "sort-key": "1-5-23"
     },
     {
       "name": "NPC: Sam Sanister",

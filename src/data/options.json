@@ -120,7 +120,9 @@
       "rich_text_doc": true,
       "display_name": "Weight of Item embargo",
       "description": [
-        "Relative weight for generating Item embargo as filler."
+        "Relative weight for generating Item embargo as filler.",
+        "",
+        "You may not use items for the duration of a race."
       ],
       "default": 50,
       "group": "Item Weighting",
@@ -132,7 +134,9 @@
       "rich_text_doc": true,
       "display_name": "Weight of Freeze",
       "description": [
-        "Relative weight for generating Freeze as filler."
+        "Relative weight for generating Freeze as filler.",
+        "",
+        "You must hold the brakes for 15 seconds at the start of a race."
       ],
       "default": 50,
       "group": "Item Weighting",
@@ -144,7 +148,9 @@
       "rich_text_doc": true,
       "display_name": "Weight of Destroy your car",
       "description": [
-        "Relative weight for generating Destroy your car as filler."
+        "Relative weight for generating Destroy your car as filler.",
+        "",
+        "You must destroy your car at some point during a race."
       ],
       "default": 50,
       "group": "Item Weighting",
@@ -156,7 +162,9 @@
       "rich_text_doc": true,
       "display_name": "Weight of No pitstops",
       "description": [
-        "Relative weight for generating No pitstops as filler."
+        "Relative weight for generating No pitstops as filler.",
+        "",
+        "You must not use the pits at any point during a race."
       ],
       "default": 50,
       "group": "Item Weighting",
@@ -168,7 +176,9 @@
       "rich_text_doc": true,
       "display_name": "Weight of No shortcuts",
       "description": [
-        "Relative weight for generating No shortcuts as filler."
+        "Relative weight for generating No shortcuts as filler.",
+        "",
+        "You must not take any shortcuts during a race."
       ],
       "default": 50,
       "group": "Item Weighting",
@@ -180,7 +190,10 @@
       "rich_text_doc": true,
       "display_name": "Weight of Drive in reverse",
       "description": [
-        "Relative weight for generating Drive in reverse as filler."
+        "Relative weight for generating Drive in reverse as filler.",
+        "",
+        "You must drive in reverse into lap 2 and maintain it for 30 seconds",
+        "during a race."
       ],
       "default": 50,
       "group": "Item Weighting",
@@ -192,9 +205,29 @@
       "rich_text_doc": true,
       "display_name": "Weight of Top-down camera",
       "description": [
-        "Relative weight for generating Top-down camera as filler."
+        "Relative weight for generating Top-down camera as filler.",
+        "",
+        "You must use the top-down camera cheat for a race.",
+        "",
+        "This is a cheat-based trap."
       ],
-      "default": 50,
+      "default": 0,
+      "group": "Item Weighting",
+      "range_start": 0,
+      "range_end": 100
+    },
+    "weight_speed_boost": {
+      "type": "Range",
+      "rich_text_doc": true,
+      "display_name": "Weight of Speed boost",
+      "description": [
+        "Relative weight for generating Speed boost as filler.",
+        "",
+        "You must use the speed boost cheat for a race.",
+        "",
+        "This is a cheat-based trap."
+      ],
+      "default": 0,
       "group": "Item Weighting",
       "range_start": 0,
       "range_end": 100
@@ -204,7 +237,9 @@
       "rich_text_doc": true,
       "display_name": "Weight of Quit adventure",
       "description": [
-        "Relative weight for generating Quit adventure as filler."
+        "Relative weight for generating Quit adventure as filler.",
+        "",
+        "You must immediately quit to main menu without saving."
       ],
       "default": 50,
       "group": "Item Weighting",
@@ -216,7 +251,9 @@
       "rich_text_doc": true,
       "display_name": "Weight of Cheese Wedge Brick",
       "description": [
-        "Relative weight for generating Cheese Wedge Brick as filler."
+        "Relative weight for generating Cheese Wedge Bricks as filler.",
+        "",
+        "Cheese Wedge Brick does nothing."
       ],
       "default": 50,
       "group": "Item Weighting",
