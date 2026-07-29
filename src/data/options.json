@@ -115,10 +115,10 @@
       "range_start": 1,
       "range_end": 10
     },
-    "weight_item_embargo": {
+    "filler_weight_item_embargo": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Item embargo",
+      "display_name": "Filler items: Weight of Item embargo",
       "description": [
         "Relative weight for generating Item embargo as filler.",
         "",
@@ -127,12 +127,16 @@
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
-      "range_end": 100
+      "range_end": 100,
+      "values": {
+        "disabled": 0,
+        "recommended": 50
+      }
     },
-    "weight_freeze": {
+    "filler_weight_freeze": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Freeze",
+      "display_name": "Filler items: Weight of Freeze",
       "description": [
         "Relative weight for generating Freeze as filler.",
         "",
@@ -141,12 +145,16 @@
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
-      "range_end": 100
+      "range_end": 100,
+      "values": {
+        "disabled": 0,
+        "recommended": 50
+      }
     },
-    "weight_destroy_your_car": {
+    "filler_weight_destroy_your_car": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Destroy your car",
+      "display_name": "Filler items: Weight of Destroy your car",
       "description": [
         "Relative weight for generating Destroy your car as filler.",
         "",
@@ -155,12 +163,16 @@
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
-      "range_end": 100
+      "range_end": 100,
+      "values": {
+        "disabled": 0,
+        "recommended": 50
+      }
     },
-    "weight_no_pitstops": {
+    "filler_weight_no_pitstops": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of No pitstops",
+      "display_name": "Filler items: Weight of No pitstops",
       "description": [
         "Relative weight for generating No pitstops as filler.",
         "",
@@ -169,12 +181,16 @@
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
-      "range_end": 100
+      "range_end": 100,
+      "values": {
+        "disabled": 0,
+        "recommended": 50
+      }
     },
-    "weight_no_shortcuts": {
+    "filler_weight_no_shortcuts": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of No shortcuts",
+      "display_name": "Filler items: Weight of No shortcuts",
       "description": [
         "Relative weight for generating No shortcuts as filler.",
         "",
@@ -183,12 +199,16 @@
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
-      "range_end": 100
+      "range_end": 100,
+      "values": {
+        "disabled": 0,
+        "recommended": 50
+      }
     },
-    "weight_drive_in_reverse": {
+    "filler_weight_drive_in_reverse": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Drive in reverse",
+      "display_name": "Filler items: Weight of Drive in reverse",
       "description": [
         "Relative weight for generating Drive in reverse as filler.",
         "",
@@ -198,12 +218,16 @@
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
-      "range_end": 100
+      "range_end": 100,
+      "values": {
+        "disabled": 0,
+        "recommended": 50
+      }
     },
-    "weight_top_down_camera": {
+    "filler_weight_top_down_camera": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Top-down camera",
+      "display_name": "Filler items: Weight of Top-down camera",
       "description": [
         "Relative weight for generating Top-down camera as filler.",
         "",
@@ -214,12 +238,16 @@
       "default": 0,
       "group": "Item Weighting",
       "range_start": 0,
-      "range_end": 100
+      "range_end": 100,
+      "values": {
+        "disabled": 0,
+        "recommended": 50
+      }
     },
-    "weight_speed_boost": {
+    "filler_weight_speed_boost": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Speed boost",
+      "display_name": "Filler items: Weight of Speed boost",
       "description": [
         "Relative weight for generating Speed boost as filler.",
         "",
@@ -230,12 +258,16 @@
       "default": 0,
       "group": "Item Weighting",
       "range_start": 0,
-      "range_end": 100
+      "range_end": 100,
+      "values": {
+        "disabled": 0,
+        "recommended": 10
+      }
     },
-    "weight_quit_adventure": {
+    "filler_weight_quit_adventure": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Quit adventure",
+      "display_name": "Filler items: Weight of Quit adventure",
       "description": [
         "Relative weight for generating Quit adventure as filler.",
         "",
@@ -244,12 +276,16 @@
       "default": 50,
       "group": "Item Weighting",
       "range_start": 0,
-      "range_end": 100
+      "range_end": 100,
+      "values": {
+        "disabled": 0,
+        "recommended": 50
+      }
     },
-    "weight_cheese_wedge_brick": {
+    "filler_weight_cheese_wedge_brick": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Cheese Wedge Brick",
+      "display_name": "Filler items: Weight of Cheese Wedge Brick",
       "description": [
         "Relative weight for generating Cheese Wedge Bricks as filler.",
         "",
@@ -260,10 +296,10 @@
       "range_start": 0,
       "range_end": 100
     },
-    "weight_grip": {
+    "bonus_weight_grip": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Grip",
+      "display_name": "Car bonuses: Weight of Grip",
       "description": [
         "Relative weight for generating Grip as a progression item.",
         "",
@@ -275,10 +311,10 @@
       "range_start": 0,
       "range_end": 10
     },
-    "weight_shield": {
+    "bonus_weight_shield": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Shield",
+      "display_name": "Car bonuses: Weight of Shield",
       "description": [
         "Relative weight for generating Shield as a progression item.",
         "",
@@ -290,10 +326,10 @@
       "range_start": 0,
       "range_end": 10
     },
-    "weight_power": {
+    "bonus_weight_power": {
       "type": "Range",
       "rich_text_doc": true,
-      "display_name": "Weight of Power",
+      "display_name": "Car bonuses: Weight of Power",
       "description": [
         "Relative weight for generating Power as a progression item.",
         "",
