@@ -6,6 +6,7 @@ from mod.json_types import JsonObject
 from . import categories
 
 all_items: list[Item] = [
+  Item(name='Trivial Item', item_class=ItemClassification.PROGRESSION)
 ]
 
 item_table: JsonObject = Item.to_json_output(all_items)

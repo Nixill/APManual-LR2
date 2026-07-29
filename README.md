@@ -1,7 +1,9 @@
-# Manual for Archipelago - Nixill's Repository
-This repository is a fork of the main [Manual for Archipelago](https://github.com/ManualForArchipelago/Manual) repository, created to make syncing my own manuals easier in addition to features I can contribute back to Manual's core code. All of my work is on **other branches** of this repository; `main` is kept only up to date with the latest *released* version of Manual.
+# Trivial Manual
+This is a trivial Manual "game". It has one item to find. Once that item is found, there is one location to check and then goal.
 
-This is probably an affront to how Git and GitHub were meant to be used, but the fact that on GitHub you can only have one active fork of a given repository per account has forced my paw.
+This was thought up with no knowledge of [Clique](https://archipelago.miraheze.org/wiki/Clique), but since the website that hosted the latter is down, I've decided to make it anyway. You could use it for the same purposes (for example, plando to receive a Terraria Hard Mode item) if you'd like to gate it.
+
+What I actually made it for, though, was to have a trivial slot for a different tool that's not associated with any particular game to connect to.
 
 ## Disclaimer
 This repository is not affiliated with Manual. I am not one of its core developers, simply an APWorld dev using it and probably stepping a bit beyond my station. Also, I'll leave their own disclaimers here:
